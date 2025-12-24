@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Mail, Phone, MapPin, ShieldCheck, Loader2 } from 'lucide-react';
+import { Mail, Phone, MapPin, ShieldCheck, Loader2, Send } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
 
 const Contact = () => {
@@ -89,6 +89,16 @@ const Contact = () => {
                                 <div>
                                     <span className="block text-[10px] uppercase tracking-widest text-gray-400 font-bold mb-1">{t('contact.info.hq')}</span>
                                     <span className="text-lg font-semibold text-institutional-navy">{t('contact.info.hq_value')}</span>
+                                </div>
+                            </div>
+
+                            <div className="flex items-start gap-4">
+                                <div className="w-12 h-12 glass flex items-center justify-center text-institutional-gold">
+                                    <Send className="w-5 h-5" />
+                                </div>
+                                <div>
+                                    <span className="block text-[10px] uppercase tracking-widest text-gray-400 font-bold mb-1">{t('contact.info.ceo')}</span>
+                                    <a href={`https://${t('contact.info.ceo_value')}`} target="_blank" rel="noopener noreferrer" className="text-lg font-semibold text-institutional-navy hover:text-institutional-gold transition-colors">{t('contact.info.ceo_value')}</a>
                                 </div>
                             </div>
                         </div>

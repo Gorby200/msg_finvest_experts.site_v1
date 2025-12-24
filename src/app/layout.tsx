@@ -15,6 +15,9 @@ export async function generateMetadata() {
     return {
         title: general.meta_title || 'MSG FinVest Experts',
         description: general.meta_description || 'Institutional Consulting',
+        icons: {
+            icon: general.favicon || '/favicon.ico',
+        }
     };
 }
 

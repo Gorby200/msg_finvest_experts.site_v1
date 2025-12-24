@@ -28,6 +28,16 @@
         "title": "Компании, с которыми работали наши сотрудники",
         "items": [
             {
+                "name": "TAQA",
+                "logo": "/images/partners/taqa-new2402.logowik.com.webp",
+                "url": "https://www.taqa.com"
+            },
+            {
+                "name": "Suez",
+                "logo": "/images/partners/suez-logo-1.svg",
+                "url": "https://www.suez.com"
+            },
+            {
                 "name": "DataArt",
                 "logo": "/images/partners/DataArt-Logo-Pngsource-NYH72X7A.png",
                 "url": "https://dataart.com"
@@ -257,7 +267,9 @@
             "phone": "Прямая Линия",
             "phone_value": "+41 44 212 45 45",
             "hq": "Глобальная Штаб-квартира",
-            "hq_value": "Банхофштрассе 102, Цюрих, CH"
+            "hq_value": "Банхофштрассе 102, Цюрих, CH",
+            "ceo": "Связаться с CEO",
+            "ceo_value": "t.me/Gorby200"
         },
         "form": {
             "name": "Имя Принципала",
