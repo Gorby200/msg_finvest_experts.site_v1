@@ -50,7 +50,7 @@ const Navbar = () => {
             MSG
           </div>
           <div className="flex flex-col">
-            <span className="text-xl font-bold tracking-tight text-white group-hover:text-institutional-gold transition-colors">FinVest Experts</span>
+            <span className="text-xl font-bold tracking-tight text-white group-hover:text-institutional-gold transition-colors">{t('nav.logo_text') || 'FinVest Experts'}</span>
             <span className="text-[10px] uppercase tracking-widest text-institutional-gold/80 font-semibold leading-none">{t('nav.tagline')}</span>
           </div>
         </motion.div>

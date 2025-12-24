@@ -13,7 +13,7 @@ const Hero = () => {
             {/* Background Image with Overlay */}
             <div className="absolute inset-0 z-0">
                 <Image
-                    src="/images/hero.webp"
+                    src={t('hero.image') || "/images/hero.webp"}
                     alt="Institutional Background"
                     fill
                     className="object-cover opacity-40 mix-blend-overlay"
@@ -55,7 +55,7 @@ const Hero = () => {
             {/* Corporate Texture Overlay */}
             <div className="absolute bottom-0 right-0 w-1/2 h-full z-0 opacity-20 pointer-events-none">
                 <Image
-                    src="/images/texture.webp"
+                    src={t('hero.texture') || "/images/texture.webp"}
                     alt="Texture"
                     fill
                     className="object-contain"

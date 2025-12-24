@@ -2,14 +2,17 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useLanguage } from '@/context/LanguageContext';
 
 const AmbientBackground = () => {
+    const { t } = useLanguage();
+
     return (
         <div className="fixed inset-0 -z-10 bg-institutional-navy overflow-hidden">
             {/* Subtle Noise Texture */}
             <div
                 className="absolute inset-0 opacity-[0.03] pointer-events-none"
-                style={{ backgroundImage: 'url("/images/texture.webp")' }}
+                style={{ backgroundImage: `url("${t('hero.texture') || '/images/texture.webp'}")` }}
             ></div>
 
             {/* Moving Ambient Blobs */}

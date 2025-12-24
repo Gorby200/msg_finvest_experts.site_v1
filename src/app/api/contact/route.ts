@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
+import { getContent } from '@/lib/content';
 
 export async function POST(req: Request) {
     try {
@@ -18,11 +19,6 @@ export async function POST(req: Request) {
         }
 
         // Configure Nodemailer Transporter
-        // In a real production scenario, use environment variables for sensitive auth
-        // Assuming user will provide or configure SMTP later.
-        // For now, logging the intent or using a default test account if desired.
-        // Since user didn't provide SMTP details, I will check if ENV variables exist, otherwise log to console for development proof.
-
         const transporter = nodemailer.createTransport({
             host: process.env.SMTP_HOST || 'smtp.gmail.com',
             port: parseInt(process.env.SMTP_PORT || '587'),
@@ -33,8 +29,9 @@ export async function POST(req: Request) {
             },
         });
 
-        // Recipients list
-        const recipients = [
+        // Recipients list from settings
+        const general = await getContent('settings', 'general');
+        const recipients = general.contact_recipients || [
             's.gorbachev@gmail.com',
             's.gorbachev.uz@gmail.com',
             'maria.osmolovskaya@gmail.com'

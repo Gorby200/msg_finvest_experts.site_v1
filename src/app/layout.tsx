@@ -6,24 +6,23 @@ import AmbientBackground from "@/components/AmbientBackground";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
-    title: "MSG FinVest Experts | Institutional Consulting",
-    description: "Elite financial modeling, debt restructuring, and strategic investment analysis.",
-    // Icons are automatically handled by src/app/icon.tsx
-};
-
 import { LanguageProvider } from "@/context/LanguageContext";
-
-// ... imports
-
-import { getDictionary, getTheme } from "@/lib/content";
+import { getDictionary, getTheme, getContent } from "@/lib/content";
 import ThemeRegistry from "@/components/ThemeRegistry";
+
+export async function generateMetadata() {
+    const general = await getContent('settings', 'general');
+    return {
+        title: general.meta_title || 'MSG FinVest Experts',
+        description: general.meta_description || 'Institutional Consulting',
+    };
+}
 
 export default async function RootLayout({
     children,
-}: Readonly<{
+}: {
     children: React.ReactNode;
-}>) {
+}) {
     const en = await getDictionary('en');
     const ru = await getDictionary('ru');
     const theme = await getTheme();

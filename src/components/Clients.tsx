@@ -3,13 +3,18 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { useLanguage } from '@/context/LanguageContext';
 
 const Clients = () => {
+    const { t } = useLanguage();
+
     return (
         <section className="py-20 bg-white border-b border-gray-100 overflow-hidden">
             <div className="max-width-container mx-auto px-6">
                 <div className="text-center mb-12">
-                    <span className="text-[10px] uppercase tracking-[0.5em] text-gray-400 font-bold">Trusted by Institutional Leaders</span>
+                    <span className="text-[10px] uppercase tracking-[0.5em] text-gray-400 font-bold">
+                        {t('clients.tagline') || 'Trusted by Institutional Leaders'}
+                    </span>
                 </div>
 
                 <div className="relative flex overflow-hidden">
@@ -20,7 +25,13 @@ const Clients = () => {
                     >
                         {[...Array(3)].map((_, i) => (
                             <div key={i} className="flex gap-20 items-center justify-around h-16 opacity-30 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-500 cursor-pointer">
-                                <Image src="/images/clients.webp" alt="Client Logos" width={800} height={100} className="object-contain" />
+                                <Image
+                                    src={t('clients.image') || "/images/clients.webp"}
+                                    alt="Client Logos"
+                                    width={800}
+                                    height={100}
+                                    className="object-contain"
+                                />
                             </div>
                         ))}
                     </motion.div>

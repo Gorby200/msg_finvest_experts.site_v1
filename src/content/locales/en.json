@@ -6,7 +6,8 @@
         "contact": "Contact",
         "inquire": "Inquire",
         "mandate": "Mandate",
-        "tagline": "Institutional Excellence"
+        "tagline": "Institutional Excellence",
+        "logo_text": "FinVest Experts"
     },
     "hero": {
         "title_start": "Institutional",
@@ -15,7 +16,13 @@
         "description": "Elevating global financial strategies through elite consulting, data-driven insights, and over two decades of institutional excellence.",
         "cta_primary": "Execute Vision",
         "cta_secondary": "Our Mandate",
-        "scroll": "Scroll"
+        "scroll": "Scroll",
+        "image": "/images/hero.webp",
+        "texture": "/images/texture.webp"
+    },
+    "clients": {
+        "tagline": "Trusted by Institutional Leaders",
+        "image": "/images/clients.webp"
     },
     "stats": {
         "tenure": {
@@ -117,28 +124,36 @@
                 "desc": "Strategic debt modeling and restructuring for a top-tier energy conglomerate.",
                 "category": "Finance",
                 "tenure": "18 Months",
-                "impact": "+15% OCF"
+                "impact": "+15% OCF",
+                "image": "/images/portfolio1.webp",
+                "value": "$2.1B"
             },
             "p2": {
                 "title": "Retail Chain Expansion Strategy",
                 "desc": "Comprehensive market entry and investment analysis for a regional retail leader.",
                 "category": "Strategy",
                 "tenure": "12 Months",
-                "impact": "24 Nodes"
+                "impact": "24 Nodes",
+                "image": "/images/portfolio2.webp",
+                "value": "$500M"
             },
             "p3": {
                 "title": "Institutional Portfolio Audit",
                 "desc": "Biannual independent audit and performance assessment of complex investment vehicles.",
                 "category": "Institutional",
                 "tenure": "Ongoing",
-                "impact": "Risk Optimized"
+                "impact": "Risk Optimized",
+                "image": "/images/hero.webp",
+                "value": "$1.5B"
             },
             "p4": {
                 "title": "FinTech Growth Mandate",
                 "desc": "Business planning and valuation for a series-C technology farm acquisition.",
                 "category": "Finance",
                 "tenure": "6 Months",
-                "impact": "Successful Exit"
+                "impact": "Successful Exit",
+                "image": "/images/texture.webp",
+                "value": "$250M"
             }
         },
         "labels": {

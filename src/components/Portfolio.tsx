@@ -8,43 +8,41 @@ import { useLanguage } from '@/context/LanguageContext';
 
 const Portfolio = () => {
     const { t } = useLanguage();
-    const [activeTab, setActiveTab] = useState(0); // Use index instead of string to avoid translation mismatch issues
+    const [activeTab, setActiveTab] = useState(0);
 
-    // We need to define categories inside the component to use 't'
-    const categories = t('portfolio.categories'); // Expecting an an array of strings
+    const categories = t('portfolio.categories') || ['All'];
 
-    // Re-defining projects inside component to access 't' - handled by previous replacement block but need to move it inside
     const projects = [
         {
             title: t('portfolio.items.p1.title'),
             category: t('portfolio.items.p1.category'),
-            value: '$2.1B',
+            value: t('portfolio.items.p1.value') || '$2.1B',
             desc: t('portfolio.items.p1.desc'),
-            img: '/images/portfolio1.webp',
+            img: t('portfolio.items.p1.image') || '/images/portfolio1.webp',
             stats: { tenure: t('portfolio.items.p1.tenure'), impact: t('portfolio.items.p1.impact') }
         },
         {
             title: t('portfolio.items.p2.title'),
             category: t('portfolio.items.p2.category'),
-            value: '$500M',
+            value: t('portfolio.items.p2.value') || '$500M',
             desc: t('portfolio.items.p2.desc'),
-            img: '/images/portfolio2.webp',
+            img: t('portfolio.items.p2.image') || '/images/portfolio2.webp',
             stats: { tenure: t('portfolio.items.p2.tenure'), impact: t('portfolio.items.p2.impact') }
         },
         {
             title: t('portfolio.items.p3.title'),
             category: t('portfolio.items.p3.category'),
-            value: '$1.5B',
+            value: t('portfolio.items.p3.value') || '$1.5B',
             desc: t('portfolio.items.p3.desc'),
-            img: '/images/hero.webp',
+            img: t('portfolio.items.p3.image') || '/images/hero.webp',
             stats: { tenure: t('portfolio.items.p3.tenure'), impact: t('portfolio.items.p3.impact') }
         },
         {
             title: t('portfolio.items.p4.title'),
             category: t('portfolio.items.p4.category'),
-            value: '$250M',
+            value: t('portfolio.items.p4.value') || '$250M',
             desc: t('portfolio.items.p4.desc'),
-            img: '/images/texture.webp',
+            img: t('portfolio.items.p4.image') || '/images/texture.webp',
             stats: { tenure: t('portfolio.items.p4.tenure'), impact: t('portfolio.items.p4.impact') }
         },
     ];
@@ -118,11 +116,11 @@ const Portfolio = () => {
 
                                     <div className="grid grid-cols-2 gap-8 pt-8 border-t border-white/10">
                                         <div>
-                                            <span className="block text-[10px] uppercase tracking-widest text-white/40 mb-1">Tenure</span>
+                                            <span className="block text-[10px] uppercase tracking-widest text-white/40 mb-1">{t('portfolio.labels.tenure')}</span>
                                             <span className="text-white font-medium">{project.stats.tenure}</span>
                                         </div>
                                         <div>
-                                            <span className="block text-[10px] uppercase tracking-widest text-white/40 mb-1">Impact</span>
+                                            <span className="block text-[10px] uppercase tracking-widest text-white/40 mb-1">{t('portfolio.labels.impact')}</span>
                                             <span className="text-white font-medium">{project.stats.impact}</span>
                                         </div>
                                     </div>

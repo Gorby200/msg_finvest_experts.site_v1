@@ -21,7 +21,8 @@ collections:
               { label: "Contact", name: "contact", widget: "string" },
               { label: "Inquire", name: "inquire", widget: "string" },
               { label: "Mandate", name: "mandate", widget: "string" },
-              { label: "Tagline", name: "tagline", widget: "string" }
+              { label: "Tagline", name: "tagline", widget: "string" },
+              { label: "Logo Text", name: "logo_text", widget: "string" }
             ]}
           - { label: "Hero Section", name: "hero", widget: "object", fields: [
               { label: "Title Start", name: "title_start", widget: "string" },
@@ -30,7 +31,13 @@ collections:
               { label: "Description", name: "description", widget: "text" },
               { label: "Primary CTA", name: "cta_primary", widget: "string" },
               { label: "Secondary CTA", name: "cta_secondary", widget: "string" },
-              { label: "Scroll Text", name: "scroll", widget: "string" }
+              { label: "Scroll Text", name: "scroll", widget: "string" },
+              { label: "Hero Image", name: "image", widget: "image" },
+              { label: "Background Texture", name: "texture", widget: "image" }
+            ]}
+          - { label: "Clients Section", name: "clients", widget: "object", fields: [
+              { label: "Tagline", name: "tagline", widget: "string" },
+              { label: "Client Logos Image", name: "image", widget: "image" }
             ]}
           - { label: "Stats", name: "stats", widget: "object", fields: [
               { label: "Tenure", name: "tenure", widget: "object", fields: [{label: "Value", name: "value", widget: "string"}, {label: "Label", name: "label", widget: "string"}, {label: "Sub", name: "sub", widget: "string"}] },
@@ -58,10 +65,10 @@ collections:
               { label: "Title Highlight", name: "title_highlight", widget: "string" },
               { label: "Categories", name: "categories", widget: "list" },
               { label: "Items", name: "items", widget: "object", fields: [
-                  { label: "Project 1", name: "p1", widget: "object", fields: [{label: "Title", name: "title", widget: "string"}, {label: "Category", name: "category", widget: "string"}, {label: "Desc", name: "desc", widget: "text"}, {label: "Tenure", name: "tenure", widget: "string"}, {label: "Impact", name: "impact", widget: "string"}] },
-                  { label: "Project 2", name: "p2", widget: "object", fields: [{label: "Title", name: "title", widget: "string"}, {label: "Category", name: "category", widget: "string"}, {label: "Desc", name: "desc", widget: "text"}, {label: "Tenure", name: "tenure", widget: "string"}, {label: "Impact", name: "impact", widget: "string"}] },
-                  { label: "Project 3", name: "p3", widget: "object", fields: [{label: "Title", name: "title", widget: "string"}, {label: "Category", name: "category", widget: "string"}, {label: "Desc", name: "desc", widget: "text"}, {label: "Tenure", name: "tenure", widget: "string"}, {label: "Impact", name: "impact", widget: "string"}] },
-                  { label: "Project 4", name: "p4", widget: "object", fields: [{label: "Title", name: "title", widget: "string"}, {label: "Category", name: "category", widget: "string"}, {label: "Desc", name: "desc", widget: "text"}, {label: "Tenure", name: "tenure", widget: "string"}, {label: "Impact", name: "impact", widget: "string"}] }
+                  { label: "Project 1", name: "p1", widget: "object", fields: [{label: "Title", name: "title", widget: "string"}, {label: "Category", name: "category", widget: "string"}, {label: "Desc", name: "desc", widget: "text"}, {label: "Tenure", name: "tenure", widget: "string"}, {label: "Impact", name: "impact", widget: "string"}, {label: "Value", name: "value", widget: "string"}, {label: "Image", name: "image", widget: "image"}] },
+                  { label: "Project 2", name: "p2", widget: "object", fields: [{label: "Title", name: "title", widget: "string"}, {label: "Category", name: "category", widget: "string"}, {label: "Desc", name: "desc", widget: "text"}, {label: "Tenure", name: "tenure", widget: "string"}, {label: "Impact", name: "impact", widget: "string"}, {label: "Value", name: "value", widget: "string"}, {label: "Image", name: "image", widget: "image"}] },
+                  { label: "Project 3", name: "p3", widget: "object", fields: [{label: "Title", name: "title", widget: "string"}, {label: "Category", name: "category", widget: "string"}, {label: "Desc", name: "desc", widget: "text"}, {label: "Tenure", name: "tenure", widget: "string"}, {label: "Impact", name: "impact", widget: "string"}, {label: "Value", name: "value", widget: "string"}, {label: "Image", name: "image", widget: "image"}] },
+                  { label: "Project 4", name: "p4", widget: "object", fields: [{label: "Title", name: "title", widget: "string"}, {label: "Category", name: "category", widget: "string"}, {label: "Desc", name: "desc", widget: "text"}, {label: "Tenure", name: "tenure", widget: "string"}, {label: "Impact", name: "impact", widget: "string"}, {label: "Value", name: "value", widget: "string"}, {label: "Image", name: "image", widget: "image"}] }
               ]},
               { label: "Labels", name: "labels", widget: "object", fields: [{label: "Tenure", name: "tenure", widget: "string"}, {label: "Impact", name: "impact", widget: "string"}] }
             ]}
@@ -103,7 +110,7 @@ collections:
       - name: "ru"
         label: "Russian Content"
         file: "src/content/locales/ru.json"
-        fields: # Duplicated fields for RU - in a real setup we might use partials or a simpler structure, but explicit is safest here
+        fields:
           - { label: "Navigation", name: "nav", widget: "object", fields: [
               { label: "Services", name: "services", widget: "string" },
               { label: "Portfolio", name: "portfolio", widget: "string" },
@@ -111,7 +118,8 @@ collections:
               { label: "Contact", name: "contact", widget: "string" },
               { label: "Inquire", name: "inquire", widget: "string" },
               { label: "Mandate", name: "mandate", widget: "string" },
-              { label: "Tagline", name: "tagline", widget: "string" }
+              { label: "Tagline", name: "tagline", widget: "string" },
+              { label: "Logo Text", name: "logo_text", widget: "string" }
             ]}
           - { label: "Hero Section", name: "hero", widget: "object", fields: [
               { label: "Title Start", name: "title_start", widget: "string" },
@@ -120,7 +128,13 @@ collections:
               { label: "Description", name: "description", widget: "text" },
               { label: "Primary CTA", name: "cta_primary", widget: "string" },
               { label: "Secondary CTA", name: "cta_secondary", widget: "string" },
-              { label: "Scroll Text", name: "scroll", widget: "string" }
+              { label: "Scroll Text", name: "scroll", widget: "string" },
+              { label: "Hero Image", name: "image", widget: "image" },
+              { label: "Background Texture", name: "texture", widget: "image" }
+            ]}
+          - { label: "Clients Section", name: "clients", widget: "object", fields: [
+              { label: "Tagline", name: "tagline", widget: "string" },
+              { label: "Client Logos Image", name: "image", widget: "image" }
             ]}
           - { label: "Stats", name: "stats", widget: "object", fields: [
               { label: "Tenure", name: "tenure", widget: "object", fields: [{label: "Value", name: "value", widget: "string"}, {label: "Label", name: "label", widget: "string"}, {label: "Sub", name: "sub", widget: "string"}] },
@@ -148,10 +162,10 @@ collections:
               { label: "Title Highlight", name: "title_highlight", widget: "string" },
               { label: "Categories", name: "categories", widget: "list" },
               { label: "Items", name: "items", widget: "object", fields: [
-                  { label: "Project 1", name: "p1", widget: "object", fields: [{label: "Title", name: "title", widget: "string"}, {label: "Category", name: "category", widget: "string"}, {label: "Desc", name: "desc", widget: "text"}, {label: "Tenure", name: "tenure", widget: "string"}, {label: "Impact", name: "impact", widget: "string"}] },
-                  { label: "Project 2", name: "p2", widget: "object", fields: [{label: "Title", name: "title", widget: "string"}, {label: "Category", name: "category", widget: "string"}, {label: "Desc", name: "desc", widget: "text"}, {label: "Tenure", name: "tenure", widget: "string"}, {label: "Impact", name: "impact", widget: "string"}] },
-                  { label: "Project 3", name: "p3", widget: "object", fields: [{label: "Title", name: "title", widget: "string"}, {label: "Category", name: "category", widget: "string"}, {label: "Desc", name: "desc", widget: "text"}, {label: "Tenure", name: "tenure", widget: "string"}, {label: "Impact", name: "impact", widget: "string"}] },
-                  { label: "Project 4", name: "p4", widget: "object", fields: [{label: "Title", name: "title", widget: "string"}, {label: "Category", name: "category", widget: "string"}, {label: "Desc", name: "desc", widget: "text"}, {label: "Tenure", name: "tenure", widget: "string"}, {label: "Impact", name: "impact", widget: "string"}] }
+                  { label: "Project 1", name: "p1", widget: "object", fields: [{label: "Title", name: "title", widget: "string"}, {label: "Category", name: "category", widget: "string"}, {label: "Desc", name: "desc", widget: "text"}, {label: "Tenure", name: "tenure", widget: "string"}, {label: "Impact", name: "impact", widget: "string"}, {label: "Value", name: "value", widget: "string"}, {label: "Image", name: "image", widget: "image"}] },
+                  { label: "Project 2", name: "p2", widget: "object", fields: [{label: "Title", name: "title", widget: "string"}, {label: "Category", name: "category", widget: "string"}, {label: "Desc", name: "desc", widget: "text"}, {label: "Tenure", name: "tenure", widget: "string"}, {label: "Impact", name: "impact", widget: "string"}, {label: "Value", name: "value", widget: "string"}, {label: "Image", name: "image", widget: "image"}] },
+                  { label: "Project 3", name: "p3", widget: "object", fields: [{label: "Title", name: "title", widget: "string"}, {label: "Category", name: "category", widget: "string"}, {label: "Desc", name: "desc", widget: "text"}, {label: "Tenure", name: "tenure", widget: "string"}, {label: "Impact", name: "impact", widget: "string"}, {label: "Value", name: "value", widget: "string"}, {label: "Image", name: "image", widget: "image"}] },
+                  { label: "Project 4", name: "p4", widget: "object", fields: [{label: "Title", name: "title", widget: "string"}, {label: "Category", name: "category", widget: "string"}, {label: "Desc", name: "desc", widget: "text"}, {label: "Tenure", name: "tenure", widget: "string"}, {label: "Impact", name: "impact", widget: "string"}, {label: "Value", name: "value", widget: "string"}, {label: "Image", name: "image", widget: "image"}] }
               ]},
               { label: "Labels", name: "labels", widget: "object", fields: [{label: "Tenure", name: "tenure", widget: "string"}, {label: "Impact", name: "impact", widget: "string"}] }
             ]}
@@ -193,6 +207,18 @@ collections:
   - name: "settings"
     label: "Settings"
     files:
+      - name: "general"
+        label: "General Settings"
+        file: "src/content/settings/general.json"
+        fields:
+          - { label: "Site Name", name: "site_name", widget: "string" }
+          - { label: "Meta Title", name: "meta_title", widget: "string" }
+          - { label: "Meta Description", name: "meta_description", widget: "text" }
+          - { label: "Contact Recipients", name: "contact_recipients", widget: "list" }
+          - { label: "Logos", name: "logos", widget: "object", fields: [
+              { label: "Logo Mark", name: "mark", widget: "image" },
+              { label: "Full Logo", name: "full", widget: "image" }
+            ]}
       - name: "theme"
         label: "Theme & Design"
         file: "src/content/settings/theme.json"
