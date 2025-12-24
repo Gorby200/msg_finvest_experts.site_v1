@@ -5,10 +5,82 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MSG FinVest Admin</title>
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 
 <body>
+    <!-- Simple Custom Login Gate -->
+    <style>
+        #login-gate {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #0A192F;
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: white;
+            font-family: sans-serif;
+        }
+
+        #login-gate input {
+            padding: 10px;
+            margin: 5px;
+            border-radius: 4px;
+            border: 1px solid #2D3748;
+            background: #fff;
+            color: #000;
+        }
+
+        #login-gate button {
+            padding: 10px 20px;
+            margin-top: 10px;
+            background: #C5A059;
+            border: none;
+            border-radius: 4px;
+            color: #0A192F;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        #nc-root {
+            display: none;
+        }
+
+        /* Hide CMS until logged in */
+    </style>
+
+    <div id="login-gate">
+        <h2>MSG FinVest Admin</h2>
+        <input type="text" id="username" placeholder="Login" />
+        <input type="password" id="password" placeholder="Password" />
+        <button onclick="checkLogin()">Enter Secure Area</button>
+        <p id="error" style="color: #ff6b6b; display: none;">Invalid credentials</p>
+    </div>
+
+    <script>
+        function checkLogin() {
+            const u = document.getElementById('username').value;
+            const p = document.getElementById('password').value;
+            if (u === 'Gorby200' && p === 'Gorby1978') {
+                document.getElementById('login-gate').style.display = 'none';
+                document.getElementById('nc-root').style.display = 'block';
+                localStorage.setItem('msg_admin_auth', 'true');
+            } else {
+                document.getElementById('error').style.display = 'block';
+            }
+        }
+
+        // Auto-login if previously authenticated
+        if (localStorage.getItem('msg_admin_auth') === 'true') {
+            document.getElementById('login-gate').style.display = 'none';
+            document.getElementById('nc-root').style.display = 'block';
+        }
+    </script>
+
     <!-- Include the script that builds the page and powers Decap CMS -->
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
 </body>

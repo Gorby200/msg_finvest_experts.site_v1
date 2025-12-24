@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: Gorby200/msg_finvest_experts.site_v1
   branch: main
 
 media_folder: "public/images/uploads"
