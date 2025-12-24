@@ -9,13 +9,47 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [logoClicks, setLogoClicks] = useState(0);
+  const [isDarkBackground, setIsDarkBackground] = useState(true);
   const { language, setLanguage, t } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
+
+      // Detect background brightness at navbar position
+      const navbarHeight = 80;
+      const elements = document.elementsFromPoint(window.innerWidth / 2, navbarHeight);
+
+      // Find the first visible element behind the navbar
+      const backgroundElement = elements.find(el =>
+        el.tagName !== 'NAV' &&
+        el.tagName !== 'A' &&
+        el.tagName !== 'BUTTON' &&
+        !el.closest('nav')
+      );
+
+      if (backgroundElement) {
+        const styles = window.getComputedStyle(backgroundElement);
+        const bgColor = styles.backgroundColor;
+
+        // Parse RGB values
+        const rgb = bgColor.match(/\d+/g);
+        if (rgb && rgb.length >= 3) {
+          const r = parseInt(rgb[0]);
+          const g = parseInt(rgb[1]);
+          const b = parseInt(rgb[2]);
+
+          // Calculate perceived brightness (0-255)
+          const brightness = (r * 299 + g * 587 + b * 114) / 1000;
+
+          // If background is light (brightness > 128), use dark text
+          setIsDarkBackground(brightness < 128);
+        }
+      }
     };
+
     window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Initial check
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -50,8 +84,8 @@ const Navbar = () => {
             MSG
           </div>
           <div className="flex flex-col">
-            <span className="text-xl font-bold tracking-tight text-white group-hover:text-institutional-gold transition-colors">{t('nav.logo_text') || 'FinVest Experts'}</span>
-            <span className="text-[10px] uppercase tracking-widest text-institutional-gold/80 font-semibold leading-none">{t('nav.tagline')}</span>
+            <span className={`text-xl font-bold tracking-tight transition-colors ${isDarkBackground ? 'text-white group-hover:text-institutional-gold' : 'text-institutional-navy group-hover:text-institutional-gold'}`}>{t('nav.logo_text') || 'FinVest Experts'}</span>
+            <span className={`text-[10px] uppercase tracking-widest font-semibold leading-none ${isDarkBackground ? 'text-institutional-gold/80' : 'text-institutional-gold'}`}>{t('nav.tagline')}</span>
           </div>
         </motion.div>
 
@@ -61,7 +95,7 @@ const Navbar = () => {
             <a
               key={link.name}
               href={link.href}
-              className="text-sm font-medium text-white/80 hover:text-institutional-gold transition-colors tracking-wide uppercase"
+              className={`text-sm font-medium transition-colors tracking-wide uppercase ${isDarkBackground ? 'text-white/80 hover:text-institutional-gold' : 'text-institutional-navy/80 hover:text-institutional-gold'}`}
             >
               {link.name}
             </a>
@@ -69,7 +103,7 @@ const Navbar = () => {
 
           <button
             onClick={toggleLanguage}
-            className="flex items-center gap-1 text-white/60 hover:text-institutional-gold transition-colors text-xs font-bold uppercase tracking-widest"
+            className={`flex items-center gap-1 transition-colors text-xs font-bold uppercase tracking-widest ${isDarkBackground ? 'text-white/60 hover:text-institutional-gold' : 'text-institutional-navy/60 hover:text-institutional-gold'}`}
           >
             <Globe className="w-3 h-3" />
             <span>{language === 'en' ? 'RU' : 'EN'}</span>
@@ -90,7 +124,7 @@ const Navbar = () => {
             <span>{language.toUpperCase()}</span>
           </button>
           <button
-            className="text-white"
+            className={isDarkBackground ? 'text-white' : 'text-institutional-navy'}
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             {mobileMenuOpen ? <X /> : <Menu />}
