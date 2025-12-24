@@ -4,69 +4,74 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 
-const categories = ['All', 'Finance', 'Strategy', 'Institutional'];
-
-const projects = [
-    {
-        title: 'Oil & Gas Debt Restructuring',
-        category: 'Finance',
-        value: '$2.1B',
-        desc: 'Strategic debt modeling and restructuring for a top-tier energy conglomerate.',
-        img: '/images/portfolio1.webp',
-        stats: { tenure: '18 Months', impact: '+15% OCF' }
-    },
-    {
-        title: 'Retail Chain Expansion Strategy',
-        category: 'Strategy',
-        value: '$500M',
-        desc: 'Comprehensive market entry and investment analysis for a regional retail leader.',
-        img: '/images/portfolio2.webp',
-        stats: { tenure: '12 Months', impact: '24 Nodes' }
-    },
-    {
-        title: 'Institutional Portfolio Audit',
-        category: 'Institutional',
-        value: '$1.5B',
-        desc: 'Biannual independent audit and performance assessment of complex investment vehicles.',
-        img: '/images/hero.webp',
-        stats: { tenure: 'Ongoing', impact: 'Risk Optimized' }
-    },
-    {
-        title: 'FinTech Growth Mandate',
-        category: 'Finance',
-        value: '$250M',
-        desc: 'Business planning and valuation for a series-C technology farm acquisition.',
-        img: '/images/texture.webp',
-        stats: { tenure: '6 Months', impact: 'Successful Exit' }
-    },
-];
+import { useLanguage } from '@/context/LanguageContext';
 
 const Portfolio = () => {
-    const [activeTab, setActiveTab] = useState('All');
+    const { t } = useLanguage();
+    const [activeTab, setActiveTab] = useState(0); // Use index instead of string to avoid translation mismatch issues
 
-    const filteredProjects = activeTab === 'All'
+    // We need to define categories inside the component to use 't'
+    const categories = t('portfolio.categories'); // Expecting an an array of strings
+
+    // Re-defining projects inside component to access 't' - handled by previous replacement block but need to move it inside
+    const projects = [
+        {
+            title: t('portfolio.items.p1.title'),
+            category: t('portfolio.items.p1.category'),
+            value: '$2.1B',
+            desc: t('portfolio.items.p1.desc'),
+            img: '/images/portfolio1.webp',
+            stats: { tenure: t('portfolio.items.p1.tenure'), impact: t('portfolio.items.p1.impact') }
+        },
+        {
+            title: t('portfolio.items.p2.title'),
+            category: t('portfolio.items.p2.category'),
+            value: '$500M',
+            desc: t('portfolio.items.p2.desc'),
+            img: '/images/portfolio2.webp',
+            stats: { tenure: t('portfolio.items.p2.tenure'), impact: t('portfolio.items.p2.impact') }
+        },
+        {
+            title: t('portfolio.items.p3.title'),
+            category: t('portfolio.items.p3.category'),
+            value: '$1.5B',
+            desc: t('portfolio.items.p3.desc'),
+            img: '/images/hero.webp',
+            stats: { tenure: t('portfolio.items.p3.tenure'), impact: t('portfolio.items.p3.impact') }
+        },
+        {
+            title: t('portfolio.items.p4.title'),
+            category: t('portfolio.items.p4.category'),
+            value: '$250M',
+            desc: t('portfolio.items.p4.desc'),
+            img: '/images/texture.webp',
+            stats: { tenure: t('portfolio.items.p4.tenure'), impact: t('portfolio.items.p4.impact') }
+        },
+    ];
+
+    const filteredProjects = activeTab === 0
         ? projects
-        : projects.filter(p => p.category === activeTab);
+        : projects.filter(p => p.category === categories[activeTab]);
 
     return (
         <section id="portfolio" className="py-32 bg-institutional-cream">
             <div className="max-width-container mx-auto px-6">
                 <div className="mb-20">
                     <span className="text-institutional-gold font-bold uppercase tracking-[0.4em] text-xs block mb-4">
-                        Institutional Track Record
+                        {t('portfolio.tagline')}
                     </span>
                     <h2 className="text-4xl md:text-6xl font-bold text-institutional-navy tracking-tight mb-12">
-                        Selected <span className="italic underline decoration-institutional-gold underline-offset-8">Mandates</span>
+                        {t('portfolio.title_start')} <span className="underline decoration-institutional-gold underline-offset-8">{t('portfolio.title_highlight')}</span>
                     </h2>
 
                     <div className="flex flex-wrap gap-4">
-                        {categories.map(cat => (
+                        {categories.map((cat: string, index: number) => (
                             <button
                                 key={cat}
-                                onClick={() => setActiveTab(cat)}
-                                className={`px-8 py-3 rounded-sm text-sm uppercase tracking-widest font-bold transition-all duration-300 ${activeTab === cat
-                                        ? 'bg-institutional-navy text-white shadow-xl'
-                                        : 'bg-white text-institutional-navy hover:bg-gray-100'
+                                onClick={() => setActiveTab(index)}
+                                className={`px-8 py-3 rounded-sm text-sm uppercase tracking-widest font-bold transition-all duration-300 ${activeTab === index
+                                    ? 'bg-institutional-navy text-white shadow-xl'
+                                    : 'bg-white text-institutional-navy hover:bg-gray-100'
                                     }`}
                             >
                                 {cat}
@@ -95,7 +100,7 @@ const Portfolio = () => {
 
                                 <div className="absolute inset-0 p-12 flex flex-col justify-end bg-gradient-to-t from-institutional-navy via-transparent to-transparent">
                                     <div className="flex justify-between items-end mb-6">
-                                        <span className="text-institutional-gold font-mono text-3xl font-bold">
+                                        <span className="text-institutional-gold text-3xl font-bold">
                                             {project.value}
                                         </span>
                                         <span className="bg-institutional-gold/10 text-institutional-gold px-3 py-1 text-[10px] uppercase tracking-widest font-bold border border-institutional-gold/20 backdrop-blur-md">

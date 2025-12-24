@@ -3,8 +3,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { useLanguage } from '@/context/LanguageContext';
 
 const Hero = () => {
+    const { t } = useLanguage();
+
     return (
         <section className="relative h-screen flex items-center overflow-hidden bg-institutional-navy">
             {/* Background Image with Overlay */}
@@ -27,23 +30,22 @@ const Hero = () => {
                         transition={{ duration: 0.8, ease: "easeOut" }}
                     >
                         <h1 className="text-5xl md:text-8xl font-bold text-white mb-6 leading-[1.1] tracking-tight">
-                            Institutional <span className="text-gold-gradient italic">Authority</span> <br />
-                            Digital Excellence
+                            {t('hero.title_start')} <span className="text-gold-gradient">{t('hero.title_highlight')}</span> <br />
+                            {t('hero.title_end')}
                         </h1>
 
                         <p className="text-xl md:text-2xl text-white/70 mb-10 max-w-2xl leading-relaxed font-light">
-                            Elevating global financial strategies through <span className="text-white font-medium">elite consulting</span>,
-                            data-driven insights, and over two decades of institutional excellence.
+                            {t('hero.description')}
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 items-start">
                             <button className="bg-institutional-gold text-institutional-navy px-10 py-4 rounded-sm font-bold text-lg uppercase tracking-widest hover:bg-white transition-all duration-300 shadow-2xl group flex items-center gap-3">
-                                Execute Vision
+                                {t('hero.cta_primary')}
                                 <span className="group-hover:translate-x-1 transition-transform">→</span>
                             </button>
 
                             <button className="glass text-white px-10 py-4 rounded-sm font-semibold text-lg uppercase tracking-widest hover:bg-white/10 transition-all duration-300">
-                                Our Mandate
+                                {t('hero.cta_secondary')}
                             </button>
                         </div>
                     </motion.div>
@@ -67,7 +69,7 @@ const Hero = () => {
                 className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
             >
                 <div className="w-[1px] h-12 bg-gradient-to-b from-institutional-gold to-transparent" />
-                <span className="text-[10px] uppercase tracking-[0.3em] text-white/40">Scroll</span>
+                <span className="text-[10px] uppercase tracking-[0.3em] text-white/40">{t('hero.scroll')}</span>
             </motion.div>
         </section>
     );

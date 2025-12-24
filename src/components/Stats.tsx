@@ -2,15 +2,18 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-
-const stats = [
-    { label: 'Cumulative Project Value', value: '$5.0B+', sub: 'Institutional Mandates' },
-    { label: 'Strategic Engagements', value: '200+', sub: 'Global Projects' },
-    { label: 'Market Tenure', value: '20+', sub: 'Years of Excellence' },
-    { label: 'Senior Experts', value: '25+', sub: 'Elite Advisory' },
-];
+import { useLanguage } from '@/context/LanguageContext';
 
 const Stats = () => {
+    const { t } = useLanguage();
+
+    const stats = [
+        { label: t('stats.volume.label'), value: t('stats.volume.value'), sub: t('stats.volume.sub') },
+        { label: t('stats.projects.label'), value: t('stats.projects.value'), sub: t('stats.projects.sub') },
+        { label: t('stats.tenure.label'), value: t('stats.tenure.value'), sub: t('stats.tenure.sub') },
+        { label: t('stats.experts.label'), value: t('stats.experts.value'), sub: t('stats.experts.sub') },
+    ];
+
     return (
         <section className="relative py-20 bg-institutional-navy border-y border-white/5">
             <div className="max-width-container mx-auto px-6">

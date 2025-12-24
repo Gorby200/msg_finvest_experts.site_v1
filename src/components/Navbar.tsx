@@ -2,12 +2,14 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Globe } from 'lucide-react';
+import { useLanguage } from '@/context/LanguageContext';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [logoClicks, setLogoClicks] = useState(0);
+  const { language, setLanguage, t } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,14 +27,18 @@ const Navbar = () => {
   }, [logoClicks]);
 
   const navLinks = [
-    { name: 'Services', href: '#services' },
-    { name: 'Portfolio', href: '#portfolio' },
-    { name: 'About', href: '#about' },
-    { name: 'Contact', href: '#contact' },
+    { name: t('nav.services'), href: '#services' },
+    { name: t('nav.portfolio'), href: '#portfolio' },
+    { name: t('nav.about'), href: '#about' },
+    { name: t('nav.contact'), href: '#contact' },
   ];
 
+  const toggleLanguage = () => {
+    setLanguage(language === 'en' ? 'ru' : 'en');
+  };
+
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'glass-dark py-4 shadow-2xl' : 'bg-transparent py-6'}`}>
+    <nav className={`fixed w-full z-50 transition-all duration-500 ${isScrolled ? 'bg-institutional-navy/95 backdrop-blur-md py-4 shadow-2xl border-b border-white/5' : 'bg-transparent py-6'}`}>
       <div className="max-width-container mx-auto px-6 flex justify-between items-center">
         <motion.div
           initial={{ opacity: 0, x: -20 }}
@@ -45,7 +51,7 @@ const Navbar = () => {
           </div>
           <div className="flex flex-col">
             <span className="text-xl font-bold tracking-tight text-white group-hover:text-institutional-gold transition-colors">FinVest Experts</span>
-            <span className="text-[10px] uppercase tracking-widest text-institutional-gold/80 font-semibold leading-none">Institutional Excellence</span>
+            <span className="text-[10px] uppercase tracking-widest text-institutional-gold/80 font-semibold leading-none">{t('nav.tagline')}</span>
           </div>
         </motion.div>
 
@@ -60,18 +66,36 @@ const Navbar = () => {
               {link.name}
             </a>
           ))}
+
+          <button
+            onClick={toggleLanguage}
+            className="flex items-center gap-1 text-white/60 hover:text-institutional-gold transition-colors text-xs font-bold uppercase tracking-widest"
+          >
+            <Globe className="w-3 h-3" />
+            <span>{language === 'en' ? 'RU' : 'EN'}</span>
+          </button>
+
           <button className="bg-institutional-gold text-institutional-navy px-6 py-2 rounded-sm font-bold text-sm uppercase tracking-wider hover:bg-white hover:scale-105 active:scale-95 transition-all duration-300 shadow-xl">
-            Inquire
+            {t('nav.inquire')}
           </button>
         </div>
 
         {/* Mobile Toggle */}
-        <button
-          className="md:hidden text-white"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-        >
-          {mobileMenuOpen ? <X /> : <Menu />}
-        </button>
+        <div className="md:hidden flex items-center gap-6">
+          <button
+            onClick={toggleLanguage}
+            className="flex items-center gap-1 text-white/80 hover:text-institutional-gold transition-colors text-xs font-bold uppercase tracking-widest"
+          >
+            <Globe className="w-4 h-4" />
+            <span>{language.toUpperCase()}</span>
+          </button>
+          <button
+            className="text-white"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          >
+            {mobileMenuOpen ? <X /> : <Menu />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Menu */}
@@ -79,7 +103,7 @@ const Navbar = () => {
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="absolute top-full left-0 w-full glass-dark py-8 px-6 flex flex-col gap-6 md:hidden border-t border-white/5"
+          className="absolute top-full left-0 w-full glass-dark py-8 px-6 flex flex-col gap-6 md:hidden border-t border-white/5 bg-institutional-navy/95 backdrop-blur-md"
         >
           {navLinks.map((link) => (
             <a
@@ -92,7 +116,7 @@ const Navbar = () => {
             </a>
           ))}
           <button className="bg-institutional-gold text-institutional-navy px-6 py-3 rounded-sm font-bold w-full uppercase tracking-wider">
-            Inquire
+            {t('nav.inquire')}
           </button>
         </motion.div>
       )}
