@@ -1,32 +1,40 @@
 'use client';
 
-import React, { createContext, useContext, useState, ReactNode } from 'react';
+import React, { createContext, useContext, useState, useEffect } from 'react';
 
-type Language = 'en' | 'ru';
+// Define the shape of our translations (loose typing for flexibility with CMS)
+type Translations = any;
 
 interface LanguageContextType {
-    language: Language;
-    setLanguage: (lang: Language) => void;
+    language: 'en' | 'ru';
+    setLanguage: (lang: 'en' | 'ru') => void;
     t: (key: string) => any;
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
-import { translations } from '@/data/translations';
+export const LanguageProvider = ({
+    children,
+    dictionaries
+}: {
+    children: React.ReactNode,
+    dictionaries: { en: Translations, ru: Translations }
+}) => {
+    const [language, setLanguage] = useState<'en' | 'ru'>('en');
 
-export const LanguageProvider = ({ children }: { children: ReactNode }) => {
-    const [language, setLanguage] = useState<Language>('en');
-
+    // Simple nested key retrieval
     const t = (key: string) => {
         const keys = key.split('.');
-        let value: any = translations[language];
+        let value = dictionaries[language];
 
         for (const k of keys) {
-            if (value === undefined) return key;
-            value = value[k];
+            if (value && value[k]) {
+                value = value[k];
+            } else {
+                return key; // Fallback to key if not found
+            }
         }
-
-        return value || key;
+        return value;
     };
 
     return (

@@ -1,0 +1,211 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "content"
+    label: "Site Content"
+    files:
+      - name: "en"
+        label: "English Content"
+        file: "src/content/locales/en.json"
+        fields:
+          - { label: "Navigation", name: "nav", widget: "object", fields: [
+              { label: "Services", name: "services", widget: "string" },
+              { label: "Portfolio", name: "portfolio", widget: "string" },
+              { label: "About", name: "about", widget: "string" },
+              { label: "Contact", name: "contact", widget: "string" },
+              { label: "Inquire", name: "inquire", widget: "string" },
+              { label: "Mandate", name: "mandate", widget: "string" },
+              { label: "Tagline", name: "tagline", widget: "string" }
+            ]}
+          - { label: "Hero Section", name: "hero", widget: "object", fields: [
+              { label: "Title Start", name: "title_start", widget: "string" },
+              { label: "Title Highlight", name: "title_highlight", widget: "string" },
+              { label: "Title End", name: "title_end", widget: "string" },
+              { label: "Description", name: "description", widget: "text" },
+              { label: "Primary CTA", name: "cta_primary", widget: "string" },
+              { label: "Secondary CTA", name: "cta_secondary", widget: "string" },
+              { label: "Scroll Text", name: "scroll", widget: "string" }
+            ]}
+          - { label: "Stats", name: "stats", widget: "object", fields: [
+              { label: "Tenure", name: "tenure", widget: "object", fields: [{label: "Value", name: "value", widget: "string"}, {label: "Label", name: "label", widget: "string"}, {label: "Sub", name: "sub", widget: "string"}] },
+              { label: "Volume", name: "volume", widget: "object", fields: [{label: "Value", name: "value", widget: "string"}, {label: "Label", name: "label", widget: "string"}, {label: "Sub", name: "sub", widget: "string"}] },
+              { label: "Projects", name: "projects", widget: "object", fields: [{label: "Value", name: "value", widget: "string"}, {label: "Label", name: "label", widget: "string"}, {label: "Sub", name: "sub", widget: "string"}] },
+              { label: "Experts", name: "experts", widget: "object", fields: [{label: "Value", name: "value", widget: "string"}, {label: "Label", name: "label", widget: "string"}, {label: "Sub", name: "sub", widget: "string"}] }
+            ]}
+          - { label: "Services", name: "services", widget: "object", fields: [
+              { label: "Tagline", name: "tagline", widget: "string" },
+              { label: "Title Start", name: "title_start", widget: "string" },
+              { label: "Title Highlight", name: "title_highlight", widget: "string" },
+              { label: "Description", name: "description", widget: "text" },
+              { label: "Items", name: "items", widget: "object", fields: [
+                  { label: "Architecture", name: "arch", widget: "object", fields: [{label: "Title", name: "title", widget: "string"}, {label: "Desc", name: "desc", widget: "text"}, {label: "Features", name: "features", widget: "list"}] },
+                  { label: "Strategy", name: "strat", widget: "object", fields: [{label: "Title", name: "title", widget: "string"}, {label: "Desc", name: "desc", widget: "text"}, {label: "Features", name: "features", widget: "list"}] },
+                  { label: "Forensics", name: "forensics", widget: "object", fields: [{label: "Title", name: "title", widget: "string"}, {label: "Desc", name: "desc", widget: "text"}, {label: "Features", name: "features", widget: "list"}] },
+                  { label: "Assurance", name: "assurance", widget: "object", fields: [{label: "Title", name: "title", widget: "string"}, {label: "Desc", name: "desc", widget: "text"}, {label: "Features", name: "features", widget: "list"}] },
+                  { label: "Debt", name: "debt", widget: "object", fields: [{label: "Title", name: "title", widget: "string"}, {label: "Desc", name: "desc", widget: "text"}, {label: "Features", name: "features", widget: "list"}] },
+                  { label: "Advisory", name: "advisory", widget: "object", fields: [{label: "Title", name: "title", widget: "string"}, {label: "Desc", name: "desc", widget: "text"}, {label: "Features", name: "features", widget: "list"}] }
+              ]}
+            ]}
+          - { label: "Portfolio", name: "portfolio", widget: "object", fields: [
+              { label: "Tagline", name: "tagline", widget: "string" },
+              { label: "Title Start", name: "title_start", widget: "string" },
+              { label: "Title Highlight", name: "title_highlight", widget: "string" },
+              { label: "Categories", name: "categories", widget: "list" },
+              { label: "Items", name: "items", widget: "object", fields: [
+                  { label: "Project 1", name: "p1", widget: "object", fields: [{label: "Title", name: "title", widget: "string"}, {label: "Category", name: "category", widget: "string"}, {label: "Desc", name: "desc", widget: "text"}, {label: "Tenure", name: "tenure", widget: "string"}, {label: "Impact", name: "impact", widget: "string"}] },
+                  { label: "Project 2", name: "p2", widget: "object", fields: [{label: "Title", name: "title", widget: "string"}, {label: "Category", name: "category", widget: "string"}, {label: "Desc", name: "desc", widget: "text"}, {label: "Tenure", name: "tenure", widget: "string"}, {label: "Impact", name: "impact", widget: "string"}] },
+                  { label: "Project 3", name: "p3", widget: "object", fields: [{label: "Title", name: "title", widget: "string"}, {label: "Category", name: "category", widget: "string"}, {label: "Desc", name: "desc", widget: "text"}, {label: "Tenure", name: "tenure", widget: "string"}, {label: "Impact", name: "impact", widget: "string"}] },
+                  { label: "Project 4", name: "p4", widget: "object", fields: [{label: "Title", name: "title", widget: "string"}, {label: "Category", name: "category", widget: "string"}, {label: "Desc", name: "desc", widget: "text"}, {label: "Tenure", name: "tenure", widget: "string"}, {label: "Impact", name: "impact", widget: "string"}] }
+              ]},
+              { label: "Labels", name: "labels", widget: "object", fields: [{label: "Tenure", name: "tenure", widget: "string"}, {label: "Impact", name: "impact", widget: "string"}] }
+            ]}
+          - { label: "Contact", name: "contact", widget: "object", fields: [
+              { label: "Tagline", name: "tagline", widget: "string" },
+              { label: "Title Start", name: "title_start", widget: "string" },
+              { label: "Title Highlight", name: "title_highlight", widget: "string" },
+              { label: "Description", name: "description", widget: "text" },
+              { label: "Info", name: "info", widget: "object", fields: [
+                  {label: "Email Label", name: "email", widget: "string"}, {label: "Email Value", name: "email_value", widget: "string"},
+                  {label: "Phone Label", name: "phone", widget: "string"}, {label: "Phone Value", name: "phone_value", widget: "string"},
+                  {label: "HQ Label", name: "hq", widget: "string"}, {label: "HQ Value", name: "hq_value", widget: "string"}
+              ]},
+              { label: "Form", name: "form", widget: "object", fields: [
+                  {label: "Name Label", name: "name", widget: "string"},
+                  {label: "Org Label", name: "org", widget: "string"},
+                  {label: "Email Label", name: "email", widget: "string"},
+                  {label: "Type Label", name: "type", widget: "string"},
+                  {label: "Narrative Label", name: "narrative", widget: "string"},
+                  {label: "Submit Button", name: "submit", widget: "string"},
+                  {label: "Security Note", name: "security", widget: "string"},
+                  {label: "Mandate Types", name: "types", widget: "list"},
+                  {label: "Messages", name: "messages", widget: "object", fields: [{label: "Sending", name: "sending", widget: "string"}, {label: "Success", name: "success", widget: "string"}, {label: "Error", name: "error", widget: "string"}]}
+              ]}
+            ]}
+          - { label: "Footer", name: "footer", widget: "object", fields: [
+              { label: "Rights", name: "rights", widget: "string" },
+              { label: "Privacy", name: "privacy", widget: "string" },
+              { label: "Compliance", name: "compliance", widget: "string" },
+              { label: "Access", name: "access", widget: "string" }
+            ]}
+          - { label: "CTA", name: "cta", widget: "object", fields: [
+              { label: "Title Start", name: "title_start", widget: "string" },
+              { label: "Title Highlight", name: "title_highlight", widget: "string" },
+              { label: "Description", name: "description", widget: "text" },
+              { label: "Button", name: "button", widget: "string" }
+            ]}
+
+      - name: "ru"
+        label: "Russian Content"
+        file: "src/content/locales/ru.json"
+        fields: # Duplicated fields for RU - in a real setup we might use partials or a simpler structure, but explicit is safest here
+          - { label: "Navigation", name: "nav", widget: "object", fields: [
+              { label: "Services", name: "services", widget: "string" },
+              { label: "Portfolio", name: "portfolio", widget: "string" },
+              { label: "About", name: "about", widget: "string" },
+              { label: "Contact", name: "contact", widget: "string" },
+              { label: "Inquire", name: "inquire", widget: "string" },
+              { label: "Mandate", name: "mandate", widget: "string" },
+              { label: "Tagline", name: "tagline", widget: "string" }
+            ]}
+          - { label: "Hero Section", name: "hero", widget: "object", fields: [
+              { label: "Title Start", name: "title_start", widget: "string" },
+              { label: "Title Highlight", name: "title_highlight", widget: "string" },
+              { label: "Title End", name: "title_end", widget: "string" },
+              { label: "Description", name: "description", widget: "text" },
+              { label: "Primary CTA", name: "cta_primary", widget: "string" },
+              { label: "Secondary CTA", name: "cta_secondary", widget: "string" },
+              { label: "Scroll Text", name: "scroll", widget: "string" }
+            ]}
+          - { label: "Stats", name: "stats", widget: "object", fields: [
+              { label: "Tenure", name: "tenure", widget: "object", fields: [{label: "Value", name: "value", widget: "string"}, {label: "Label", name: "label", widget: "string"}, {label: "Sub", name: "sub", widget: "string"}] },
+              { label: "Volume", name: "volume", widget: "object", fields: [{label: "Value", name: "value", widget: "string"}, {label: "Label", name: "label", widget: "string"}, {label: "Sub", name: "sub", widget: "string"}] },
+              { label: "Projects", name: "projects", widget: "object", fields: [{label: "Value", name: "value", widget: "string"}, {label: "Label", name: "label", widget: "string"}, {label: "Sub", name: "sub", widget: "string"}] },
+              { label: "Experts", name: "experts", widget: "object", fields: [{label: "Value", name: "value", widget: "string"}, {label: "Label", name: "label", widget: "string"}, {label: "Sub", name: "sub", widget: "string"}] }
+            ]}
+          - { label: "Services", name: "services", widget: "object", fields: [
+              { label: "Tagline", name: "tagline", widget: "string" },
+              { label: "Title Start", name: "title_start", widget: "string" },
+              { label: "Title Highlight", name: "title_highlight", widget: "string" },
+              { label: "Description", name: "description", widget: "text" },
+              { label: "Items", name: "items", widget: "object", fields: [
+                  { label: "Architecture", name: "arch", widget: "object", fields: [{label: "Title", name: "title", widget: "string"}, {label: "Desc", name: "desc", widget: "text"}, {label: "Features", name: "features", widget: "list"}] },
+                  { label: "Strategy", name: "strat", widget: "object", fields: [{label: "Title", name: "title", widget: "string"}, {label: "Desc", name: "desc", widget: "text"}, {label: "Features", name: "features", widget: "list"}] },
+                  { label: "Forensics", name: "forensics", widget: "object", fields: [{label: "Title", name: "title", widget: "string"}, {label: "Desc", name: "desc", widget: "text"}, {label: "Features", name: "features", widget: "list"}] },
+                  { label: "Assurance", name: "assurance", widget: "object", fields: [{label: "Title", name: "title", widget: "string"}, {label: "Desc", name: "desc", widget: "text"}, {label: "Features", name: "features", widget: "list"}] },
+                  { label: "Debt", name: "debt", widget: "object", fields: [{label: "Title", name: "title", widget: "string"}, {label: "Desc", name: "desc", widget: "text"}, {label: "Features", name: "features", widget: "list"}] },
+                  { label: "Advisory", name: "advisory", widget: "object", fields: [{label: "Title", name: "title", widget: "string"}, {label: "Desc", name: "desc", widget: "text"}, {label: "Features", name: "features", widget: "list"}] }
+              ]}
+            ]}
+          - { label: "Portfolio", name: "portfolio", widget: "object", fields: [
+              { label: "Tagline", name: "tagline", widget: "string" },
+              { label: "Title Start", name: "title_start", widget: "string" },
+              { label: "Title Highlight", name: "title_highlight", widget: "string" },
+              { label: "Categories", name: "categories", widget: "list" },
+              { label: "Items", name: "items", widget: "object", fields: [
+                  { label: "Project 1", name: "p1", widget: "object", fields: [{label: "Title", name: "title", widget: "string"}, {label: "Category", name: "category", widget: "string"}, {label: "Desc", name: "desc", widget: "text"}, {label: "Tenure", name: "tenure", widget: "string"}, {label: "Impact", name: "impact", widget: "string"}] },
+                  { label: "Project 2", name: "p2", widget: "object", fields: [{label: "Title", name: "title", widget: "string"}, {label: "Category", name: "category", widget: "string"}, {label: "Desc", name: "desc", widget: "text"}, {label: "Tenure", name: "tenure", widget: "string"}, {label: "Impact", name: "impact", widget: "string"}] },
+                  { label: "Project 3", name: "p3", widget: "object", fields: [{label: "Title", name: "title", widget: "string"}, {label: "Category", name: "category", widget: "string"}, {label: "Desc", name: "desc", widget: "text"}, {label: "Tenure", name: "tenure", widget: "string"}, {label: "Impact", name: "impact", widget: "string"}] },
+                  { label: "Project 4", name: "p4", widget: "object", fields: [{label: "Title", name: "title", widget: "string"}, {label: "Category", name: "category", widget: "string"}, {label: "Desc", name: "desc", widget: "text"}, {label: "Tenure", name: "tenure", widget: "string"}, {label: "Impact", name: "impact", widget: "string"}] }
+              ]},
+              { label: "Labels", name: "labels", widget: "object", fields: [{label: "Tenure", name: "tenure", widget: "string"}, {label: "Impact", name: "impact", widget: "string"}] }
+            ]}
+          - { label: "Contact", name: "contact", widget: "object", fields: [
+              { label: "Tagline", name: "tagline", widget: "string" },
+              { label: "Title Start", name: "title_start", widget: "string" },
+              { label: "Title Highlight", name: "title_highlight", widget: "string" },
+              { label: "Description", name: "description", widget: "text" },
+              { label: "Info", name: "info", widget: "object", fields: [
+                  {label: "Email Label", name: "email", widget: "string"}, {label: "Email Value", name: "email_value", widget: "string"},
+                  {label: "Phone Label", name: "phone", widget: "string"}, {label: "Phone Value", name: "phone_value", widget: "string"},
+                  {label: "HQ Label", name: "hq", widget: "string"}, {label: "HQ Value", name: "hq_value", widget: "string"}
+              ]},
+              { label: "Form", name: "form", widget: "object", fields: [
+                  {label: "Name Label", name: "name", widget: "string"},
+                  {label: "Org Label", name: "org", widget: "string"},
+                  {label: "Email Label", name: "email", widget: "string"},
+                  {label: "Type Label", name: "type", widget: "string"},
+                  {label: "Narrative Label", name: "narrative", widget: "string"},
+                  {label: "Submit Button", name: "submit", widget: "string"},
+                  {label: "Security Note", name: "security", widget: "string"},
+                  {label: "Mandate Types", name: "types", widget: "list"},
+                  {label: "Messages", name: "messages", widget: "object", fields: [{label: "Sending", name: "sending", widget: "string"}, {label: "Success", name: "success", widget: "string"}, {label: "Error", name: "error", widget: "string"}]}
+              ]}
+            ]}
+          - { label: "Footer", name: "footer", widget: "object", fields: [
+              { label: "Rights", name: "rights", widget: "string" },
+              { label: "Privacy", name: "privacy", widget: "string" },
+              { label: "Compliance", name: "compliance", widget: "string" },
+              { label: "Access", name: "access", widget: "string" }
+            ]}
+          - { label: "CTA", name: "cta", widget: "object", fields: [
+              { label: "Title Start", name: "title_start", widget: "string" },
+              { label: "Title Highlight", name: "title_highlight", widget: "string" },
+              { label: "Description", name: "description", widget: "text" },
+              { label: "Button", name: "button", widget: "string" }
+            ]}
+
+  - name: "settings"
+    label: "Settings"
+    files:
+      - name: "theme"
+        label: "Theme & Design"
+        file: "src/content/settings/theme.json"
+        fields:
+          - label: "Institutional Colors"
+            name: "colors"
+            widget: "object"
+            fields:
+              - label: "Main Palette"
+                name: "institutional"
+                widget: "object"
+                fields:
+                  - { label: "Navy (Background)", name: "navy", widget: "color" }
+                  - { label: "Gold (Accent)", name: "gold", widget: "color" }
+                  - { label: "Slate (Secondary Text)", name: "slate", widget: "color" }
+                  - { label: "Cream (Cards/Highlights)", name: "cream", widget: "color" }
+                  - { label: "Aurora (Subtlety)", name: "aurora", widget: "color" }

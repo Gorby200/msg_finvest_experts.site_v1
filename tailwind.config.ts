@@ -10,11 +10,11 @@ const config: Config = {
         extend: {
             colors: {
                 institutional: {
-                    navy: "#0A192F",
-                    gold: "#C5A059",
-                    slate: "#2D3748",
-                    cream: "#F7FAFC",
-                    aurora: "#E6FFFA",
+                    navy: "var(--navy)",
+                    gold: "var(--gold)",
+                    slate: "var(--slate)",
+                    cream: "var(--cream)",
+                    aurora: "var(--aurora)",
                 }
             },
             backgroundImage: {

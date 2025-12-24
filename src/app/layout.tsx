@@ -16,15 +16,23 @@ import { LanguageProvider } from "@/context/LanguageContext";
 
 // ... imports
 
-export default function RootLayout({
+import { getDictionary, getTheme } from "@/lib/content";
+import ThemeRegistry from "@/components/ThemeRegistry";
+
+export default async function RootLayout({
     children,
 }: Readonly<{
     children: React.ReactNode;
 }>) {
+    const en = await getDictionary('en');
+    const ru = await getDictionary('ru');
+    const theme = await getTheme();
+
     return (
         <html lang="en">
+            <ThemeRegistry theme={theme} />
             <body className={inter.className}>
-                <LanguageProvider>
+                <LanguageProvider dictionaries={{ en, ru }}>
                     <LoadingScreen />
                     <AmbientBackground />
                     {children}

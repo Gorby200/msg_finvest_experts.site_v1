@@ -1,0 +1,195 @@
+{
+    "nav": {
+        "services": "Services",
+        "portfolio": "Portfolio",
+        "about": "About",
+        "contact": "Contact",
+        "inquire": "Inquire",
+        "mandate": "Mandate",
+        "tagline": "Institutional Excellence"
+    },
+    "hero": {
+        "title_start": "Institutional",
+        "title_highlight": "Authority",
+        "title_end": "Digital Excellence",
+        "description": "Elevating global financial strategies through elite consulting, data-driven insights, and over two decades of institutional excellence.",
+        "cta_primary": "Execute Vision",
+        "cta_secondary": "Our Mandate",
+        "scroll": "Scroll"
+    },
+    "stats": {
+        "tenure": {
+            "value": "22",
+            "label": "Years of Tenure",
+            "sub": "Since 2003"
+        },
+        "volume": {
+            "value": "$5B+",
+            "label": "Transaction Volume",
+            "sub": "Global Mandates"
+        },
+        "projects": {
+            "value": "200+",
+            "label": "Projects Executed",
+            "sub": " Across EMEA"
+        },
+        "experts": {
+            "value": "25+",
+            "label": "Senior Experts",
+            "sub": "Elite Advisory"
+        }
+    },
+    "services": {
+        "tagline": "Strategic Portfolio",
+        "title_start": "Institutional Solutions for",
+        "title_highlight": "Unprecedented Challenges.",
+        "description": "Our methodology combines deep financial expertise with rigorous analytical frameworks to deliver consistent alpha.",
+        "items": {
+            "arch": {
+                "title": "Financial Architecture",
+                "desc": "High-precision modeling and strategic business planning for multi-billion dollar ventures.",
+                "features": [
+                    "Precision Modeling",
+                    "Stress Testing",
+                    "Capital Optimization"
+                ]
+            },
+            "strat": {
+                "title": "Strategic Mandates",
+                "desc": "Corporate strategy development and organizational forensics for market leadership.",
+                "features": [
+                    "Market Entry",
+                    "Diagnostic Audit",
+                    "Growth Playbooks"
+                ]
+            },
+            "forensics": {
+                "title": "Investment Forensics",
+                "desc": "Deep-dive analysis and independent feasibility studies for institutional investors.",
+                "features": [
+                    "Feasibility Analysis",
+                    "Independent Review",
+                    "Risk Mitigation"
+                ]
+            },
+            "assurance": {
+                "title": "Project Assurance",
+                "desc": "Independent audit and performance tracking for large-scale investment portfolios.",
+                "features": [
+                    "Project Audit",
+                    "Due Diligence",
+                    "Performance Benchmarking"
+                ]
+            },
+            "debt": {
+                "title": "Debt Engineering",
+                "desc": "Complex debt modeling, restructuring, and capital structure optimization.",
+                "features": [
+                    "Restructuring",
+                    "Debt Capacity",
+                    "Structured Finance"
+                ]
+            },
+            "advisory": {
+                "title": "Transaction Advisory",
+                "desc": "Full-spectrum M&A support and institutional-grade company valuation.",
+                "features": [
+                    "M&A Strategy",
+                    "Asset Valuation",
+                    "Deal Structuring"
+                ]
+            }
+        }
+    },
+    "portfolio": {
+        "tagline": "Institutional Track Record",
+        "title_start": "Selected",
+        "title_highlight": "Mandates",
+        "categories": [
+            "All",
+            "Finance",
+            "Strategy",
+            "Institutional"
+        ],
+        "items": {
+            "p1": {
+                "title": "Oil & Gas Debt Restructuring",
+                "desc": "Strategic debt modeling and restructuring for a top-tier energy conglomerate.",
+                "category": "Finance",
+                "tenure": "18 Months",
+                "impact": "+15% OCF"
+            },
+            "p2": {
+                "title": "Retail Chain Expansion Strategy",
+                "desc": "Comprehensive market entry and investment analysis for a regional retail leader.",
+                "category": "Strategy",
+                "tenure": "12 Months",
+                "impact": "24 Nodes"
+            },
+            "p3": {
+                "title": "Institutional Portfolio Audit",
+                "desc": "Biannual independent audit and performance assessment of complex investment vehicles.",
+                "category": "Institutional",
+                "tenure": "Ongoing",
+                "impact": "Risk Optimized"
+            },
+            "p4": {
+                "title": "FinTech Growth Mandate",
+                "desc": "Business planning and valuation for a series-C technology farm acquisition.",
+                "category": "Finance",
+                "tenure": "6 Months",
+                "impact": "Successful Exit"
+            }
+        },
+        "labels": {
+            "tenure": "Tenure",
+            "impact": "Impact"
+        }
+    },
+    "contact": {
+        "tagline": "Secure Consult",
+        "title_start": "Establish Your",
+        "title_highlight": "Mandate.",
+        "description": "Initiate a confidential dialogue with our lead partners. We prioritize discretion and institutional gravity in all engagements.",
+        "info": {
+            "email": "Electronic Mail",
+            "email_value": "experts@msgfinvest.com",
+            "phone": "Direct Line",
+            "phone_value": "+41 44 212 45 45",
+            "hq": "Global HQ",
+            "hq_value": "Bahnhofstrasse 102, Zürich, CH"
+        },
+        "form": {
+            "name": "Principal Name",
+            "org": "Organization",
+            "email": "Confidential Email",
+            "type": "Mandate Type",
+            "narrative": "Brief Narrative",
+            "submit": "Submit Mandate Proposal",
+            "security": "All communications are encrypted and subject to Swiss confidentiality standards.",
+            "types": [
+                "Financial Modeling",
+                "Debt Restructuring",
+                "Strategic Acquisition",
+                "Other Institutional Engagement"
+            ],
+            "messages": {
+                "sending": "Encrypting & Transmitting...",
+                "success": "Mandate Proposal Securely Transmitted.",
+                "error": "Transmission Interrupted. Please contact via direct line."
+            }
+        }
+    },
+    "footer": {
+        "rights": "© 2025 MSG FinVest Switzerland. All Rights Reserved.",
+        "privacy": "Privacy Mandate",
+        "compliance": "Compliance",
+        "access": "Institutional Access"
+    },
+    "cta": {
+        "title_start": "Ready to",
+        "title_highlight": "Execute?",
+        "description": "Our experts are standing by to transform your institutional challenges into strategic advantages.",
+        "button": "Secure Consult"
+    }
+}
