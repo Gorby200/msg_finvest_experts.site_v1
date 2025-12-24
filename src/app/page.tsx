@@ -7,6 +7,7 @@ import Services from '@/components/Services';
 import Portfolio from '@/components/Portfolio';
 import Contact from '@/components/Contact';
 import Clients from '@/components/Clients';
+import PartnerCarousel from '@/components/PartnerCarousel';
 import { useLanguage } from '@/context/LanguageContext';
 
 export default function Home() {
@@ -35,6 +36,8 @@ export default function Home() {
                     </button>
                 </div>
             </section>
+
+            <PartnerCarousel />
 
             <footer className="py-12 bg-black text-white/40 border-t border-white/5">
                 <div className="max-width-container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">

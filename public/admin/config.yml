@@ -39,6 +39,14 @@ collections:
               { label: "Tagline", name: "tagline", widget: "string" },
               { label: "Client Logos Image", name: "image", widget: "image" }
             ]}
+          - { label: "Partners Carousel", name: "partners", widget: "object", fields: [
+              { label: "Title", name: "title", widget: "string" },
+              { label: "Items", name: "items", widget: "list", fields: [
+                { label: "Company Name", name: "name", widget: "string" },
+                { label: "Logo", name: "logo", widget: "image", media_folder: "public/images/partners", public_folder: "/images/partners" },
+                { label: "Website URL", name: "url", widget: "string", required: false }
+              ]}
+            ]}
           - { label: "Stats", name: "stats", widget: "object", fields: [
               { label: "Tenure", name: "tenure", widget: "object", fields: [{label: "Value", name: "value", widget: "string"}, {label: "Label", name: "label", widget: "string"}, {label: "Sub", name: "sub", widget: "string"}] },
               { label: "Volume", name: "volume", widget: "object", fields: [{label: "Value", name: "value", widget: "string"}, {label: "Label", name: "label", widget: "string"}, {label: "Sub", name: "sub", widget: "string"}] },
@@ -135,6 +143,14 @@ collections:
           - { label: "Clients Section", name: "clients", widget: "object", fields: [
               { label: "Tagline", name: "tagline", widget: "string" },
               { label: "Client Logos Image", name: "image", widget: "image" }
+            ]}
+          - { label: "Partners Carousel", name: "partners", widget: "object", fields: [
+              { label: "Title", name: "title", widget: "string" },
+              { label: "Items", name: "items", widget: "list", fields: [
+                { label: "Company Name", name: "name", widget: "string" },
+                { label: "Logo", name: "logo", widget: "image", media_folder: "public/images/partners", public_folder: "/images/partners" },
+                { label: "Website URL", name: "url", widget: "string", required: false }
+              ]}
             ]}
           - { label: "Stats", name: "stats", widget: "object", fields: [
               { label: "Tenure", name: "tenure", widget: "object", fields: [{label: "Value", name: "value", widget: "string"}, {label: "Label", name: "label", widget: "string"}, {label: "Sub", name: "sub", widget: "string"}] },

@@ -24,6 +24,91 @@
         "tagline": "Trusted by Institutional Leaders",
         "image": "/images/clients.webp"
     },
+    "partners": {
+        "title": "Companies our employees have worked with",
+        "items": [
+            {
+                "name": "DataArt",
+                "logo": "/images/partners/DataArt-Logo-Pngsource-NYH72X7A.png",
+                "url": "https://dataart.com"
+            },
+            {
+                "name": "Durisol",
+                "logo": "/images/partners/Durisol.png",
+                "url": "https://durisol.com"
+            },
+            {
+                "name": "London Stock Exchange",
+                "logo": "/images/partners/London_Stock_Exchange_Logo.svg.png",
+                "url": "https://www.lseg.com"
+            },
+            {
+                "name": "Baltinvestbank",
+                "logo": "/images/partners/baltinvestbank.png",
+                "url": "https://baltinvestbank.com"
+            },
+            {
+                "name": "EBRD",
+                "logo": "/images/partners/ebrd.png",
+                "url": "https://www.ebrd.com"
+            },
+            {
+                "name": "Grow Food",
+                "logo": "/images/partners/growfood.png",
+                "url": "https://growfood.pro"
+            },
+            {
+                "name": "IBS",
+                "logo": "/images/partners/ibs.png",
+                "url": "https://ibs.ru"
+            },
+            {
+                "name": "Leipurin",
+                "logo": "/images/partners/leipurin.png",
+                "url": "https://leipurin.com"
+            },
+            {
+                "name": "Nasdaq",
+                "logo": "/images/partners/nasdaq1.svg",
+                "url": "https://www.nasdaq.com"
+            },
+            {
+                "name": "National Bank of Kuwait",
+                "logo": "/images/partners/nbk-logo.svg",
+                "url": "https://www.nbk.com"
+            },
+            {
+                "name": "PBL Holding",
+                "logo": "/images/partners/pbl_holding.png",
+                "url": ""
+            },
+            {
+                "name": "Penoplex",
+                "logo": "/images/partners/penoplex.png",
+                "url": "https://www.penoplex.ru"
+            },
+            {
+                "name": "Piedra Los Martires",
+                "logo": "/images/partners/piedra_los_martires.png",
+                "url": "https://www.piedralosmartires.com"
+            },
+            {
+                "name": "Positive Technologies",
+                "logo": "/images/partners/positive_technologies.webp",
+                "url": "https://www.ptsecurity.com"
+            },
+            {
+                "name": "Ramsay Diagnostics",
+                "logo": "/images/partners/ramsay_diagnostics.png",
+                "url": "https://www.ramsayhealth.com"
+            },
+            {
+                "name": "Reksoft",
+                "logo": "/images/partners/reksoft.png",
+                "url": "https://www.reksoft.ru"
+            }
+        ]
+    },
     "stats": {
         "tenure": {
             "value": "22",
