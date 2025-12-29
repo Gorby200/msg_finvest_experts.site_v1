@@ -79,6 +79,7 @@ const Navbar = () => {
           animate={{ opacity: 1, x: 0 }}
           className="flex items-center gap-2 cursor-pointer select-none group"
           onClick={() => setLogoClicks(prev => prev + 1)}
+          data-easter-egg="logo"
         >
           <div className="w-10 h-10 bg-institutional-gold rounded-sm flex items-center justify-center font-bold text-institutional-navy shadow-lg transition-transform group-active:scale-95">
             MSG

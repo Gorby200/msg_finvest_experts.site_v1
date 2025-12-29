@@ -256,3 +256,147 @@ collections:
                   - { label: "Steel Slate", name: "slate", widget: "color" }
                   - { label: "Ivory Cream", name: "cream", widget: "color" }
                   - { label: "Aurora Blue", name: "aurora", widget: "color" }
+
+  - name: "projects"
+    label: "Projects Portfolio"
+    folder: "src/content/projects"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Project ID", name: "id", widget: "string" }
+      - { label: "Client Name", name: "client", widget: "string" }
+      - { label: "Title (EN)", name: "title", widget: "string" }
+      - { label: "Title (RU)", name: "titleRu", widget: "string" }
+      - { label: "Description (EN)", name: "description", widget: "text" }
+      - { label: "Description (RU)", name: "descriptionRu", widget: "text" }
+      - { label: "Investment Size", name: "investmentSize", widget: "string" }
+      - { label: "Location", name: "location", widget: "string" }
+      - { label: "Year", name: "year", widget: "number" }
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        options:
+          - { label: "Corporate Finance", value: "corporate-finance" }
+          - { label: "Asset Optimization", value: "asset-optimization" }
+          - { label: "Investment Structuring", value: "investment-structuring" }
+          - { label: "Risk Analysis", value: "risk-analysis" }
+          - { label: "Corporate Governance", value: "corporate-governance" }
+          - { label: "Financial Forensics", value: "financial-forensics" }
+          - { label: "FinTech", value: "fintech" }
+          - { label: "Bankruptcy", value: "bankruptcy" }
+      - { label: "Tags", name: "tags", widget: "list" }
+      - { label: "Featured", name: "featured", widget: "boolean", default: false }
+      - { label: "Project Image", name: "image", widget: "image", required: false }
+
+  - name: "easter-eggs"
+    label: "Easter Eggs"
+    files:
+      - name: "easter-eggs-content"
+        label: "Easter Eggs Content"
+        file: "src/content/easter-eggs/en.json"
+        fields:
+          - label: "Konami Code"
+            name: "konami"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Message", name: "message", widget: "text" }
+          - label: "Logo Long Press"
+            name: "logo"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Message", name: "message", widget: "text" }
+          - label: "Triple Click"
+            name: "tripleClick"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Message", name: "message", widget: "text" }
+          - label: "Secret Code"
+            name: "secretCode"
+            widget: "object"
+            fields:
+              - { label: "Code (Numbers)", name: "code", widget: "string", hint: "e.g., 1337" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Message", name: "message", widget: "text" }
+          - label: "Scroll Sequence"
+            name: "scroll"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Message", name: "message", widget: "text" }
+          - label: "Footer Click"
+            name: "footer"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Message", name: "message", widget: "text" }
+          - label: "Tab Combo"
+            name: "tab"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Message", name: "message", widget: "text" }
+          - label: "Time Trigger"
+            name: "time"
+            widget: "object"
+            fields:
+              - { label: "Time (HH:MM)", name: "time", widget: "string", hint: "e.g., 03:14" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Message", name: "message", widget: "text" }
+
+      - name: "easter-eggs-ru"
+        label: "Easter Eggs Content (Russian)"
+        file: "src/content/easter-eggs/ru.json"
+        fields:
+          - label: "Konami Code"
+            name: "konami"
+            widget: "object"
+            fields:
+              - { label: "Заголовок", name: "title", widget: "string" }
+              - { label: "Сообщение", name: "message", widget: "text" }
+          - label: "Logo Long Press"
+            name: "logo"
+            widget: "object"
+            fields:
+              - { label: "Заголовок", name: "title", widget: "string" }
+              - { label: "Сообщение", name: "message", widget: "text" }
+          - label: "Triple Click"
+            name: "tripleClick"
+            widget: "object"
+            fields:
+              - { label: "Заголовок", name: "title", widget: "string" }
+              - { label: "Сообщение", name: "message", widget: "text" }
+          - label: "Secret Code"
+            name: "secretCode"
+            widget: "object"
+            fields:
+              - { label: "Код (Цифры)", name: "code", widget: "string", hint: "например: 1337" }
+              - { label: "Заголовок", name: "title", widget: "string" }
+              - { label: "Сообщение", name: "message", widget: "text" }
+          - label: "Scroll Sequence"
+            name: "scroll"
+            widget: "object"
+            fields:
+              - { label: "Заголовок", name: "title", widget: "string" }
+              - { label: "Сообщение", name: "message", widget: "text" }
+          - label: "Footer Click"
+            name: "footer"
+            widget: "object"
+            fields:
+              - { label: "Заголовок", name: "title", widget: "string" }
+              - { label: "Сообщение", name: "message", widget: "text" }
+          - label: "Tab Combo"
+            name: "tab"
+            widget: "object"
+            fields:
+              - { label: "Заголовок", name: "title", widget: "string" }
+              - { label: "Сообщение", name: "message", widget: "text" }
+          - label: "Time Trigger"
+            name: "time"
+            widget: "object"
+            fields:
+              - { label: "Время (ЧЧ:ММ)", name: "time", widget: "string", hint: "например: 03:14" }
+              - { label: "Заголовок", name: "title", widget: "string" }
+              - { label: "Сообщение", name: "message", widget: "text" }

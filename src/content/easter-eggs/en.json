@@ -1,0 +1,36 @@
+{
+  "konami": {
+    "title": "🎮 Legendary Gamer Detected!",
+    "message": "You've unlocked the Konami Code achievement! Your dedication to gaming culture is matched only by your curiosity. Like our approach to financial challenges, you know that the right sequence of actions can unlock extraordinary results."
+  },
+  "logo": {
+    "title": "🏛️ Brand Loyalty Champion",
+    "message": "Your persistent interest in our brand speaks volumes. Just as we build lasting partnerships with our clients, you've demonstrated remarkable dedication. This level of attention to detail is exactly what makes our institutional relationships thrive."
+  },
+  "tripleClick": {
+    "title": "⚡ Precision Expert",
+    "message": "Three perfect clicks - your precision is impressive! In the world of high-stakes finance, timing and accuracy are everything. You've just demonstrated the kind of focused execution that defines successful investment strategies."
+  },
+  "secretCode": {
+    "code": "1337",
+    "title": "🔢 Elite Numerologist",
+    "message": "1337 - the language of the digital elite. You speak the dialect of innovators and early adopters. This numerical sophistication is exactly the kind of analytical thinking we value in strategic financial planning."
+  },
+  "scroll": {
+    "title": "📜 Deep Diver",
+    "message": "You've explored every layer of our digital presence. True understanding comes from thorough investigation, and you've proven your commitment to comprehensive analysis. This depth of engagement is rare and valuable."
+  },
+  "footer": {
+    "title": "🦶 Attention to Detail Master",
+    "message": "Even the finest details caught your eye. In institutional finance, what others overlook often holds the key to success. Your meticulous approach reveals the mindset of a true professional."
+  },
+  "tab": {
+    "title": "🔄 Keyboard Virtuoso",
+    "message": "You dance through digital interfaces with elegant efficiency. This sophisticated navigation style shows mastery over your tools - exactly the kind of expertise that transforms good financial strategies into exceptional ones."
+  },
+  "time": {
+    "time": "03:14",
+    "title": "π Mathematical Aesthete",
+    "message": "At 3:14 AM, the Pi time reveals your appreciation for mathematical beauty. Just as π represents infinite precision in mathematics, our financial models provide the precision needed for billion-dollar investments."
+  }
+}

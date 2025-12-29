@@ -9,6 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 import { LanguageProvider } from "@/context/LanguageContext";
 import { getDictionary, getTheme, getContent } from "@/lib/content";
 import ThemeRegistry from "@/components/ThemeRegistry";
+import { EasterEggsProvider } from "@/components/easter-eggs/EasterEggsProvider";
 
 export async function generateMetadata() {
     const general = await getContent('settings', 'general');
@@ -35,9 +36,11 @@ export default async function RootLayout({
             <ThemeRegistry theme={theme} />
             <body className={inter.className}>
                 <LanguageProvider dictionaries={{ en, ru }}>
-                    <LoadingScreen />
-                    <AmbientBackground />
-                    {children}
+                    <EasterEggsProvider>
+                        <LoadingScreen />
+                        <AmbientBackground />
+                        {children}
+                    </EasterEggsProvider>
                 </LanguageProvider>
             </body>
         </html>
