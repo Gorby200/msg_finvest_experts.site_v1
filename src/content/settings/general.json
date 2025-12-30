@@ -1,16 +1,16 @@
 {
-    "site_name": "MSG FinVest Experts",
-    "meta_title": "MSG FinVest Experts | Institutional Consulting",
-    "meta_description": "Elite financial modeling, debt restructuring, and strategic investment analysis.",
-    "favicon": "/favicon.ico",
-    "ceo_telegram": "https://t.me/Gorby200",
-    "contact_recipients": [
-        "s.gorbachev@gmail.com",
-        "s.gorbachev.uz@gmail.com",
-        "maria.osmolovskaya@gmail.com"
-    ],
-    "logos": {
-        "mark": "/images/logo-mark.png",
-        "full": "/images/logo-full.png"
-    }
+  "site_name": "MSG Finvest Experts",
+  "meta_title": "MSG Finvest Experts | Institutional Consulting",
+  "meta_description": "Elite financial modeling, debt restructuring, and strategic investment analysis.",
+  "favicon": "/favicon.ico",
+  "ceo_telegram": "https://t.me/Gorby200",
+  "contact_recipients": [
+    "s.gorbachev@gmail.com",
+    "s.gorbachev.uz@gmail.com",
+    "maria.osmolovskaya@gmail.com"
+  ],
+  "logos": {
+    "mark": "/images/logo-mark.png",
+    "full": "/images/logo-full.png"
+  }
 }
