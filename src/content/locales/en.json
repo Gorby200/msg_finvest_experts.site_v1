@@ -1,307 +1,307 @@
 {
-    "nav": {
-        "services": "Services",
-        "portfolio": "Portfolio",
-        "about": "About",
-        "contact": "Contact",
-        "inquire": "Inquire",
-        "mandate": "Mandate",
-        "tagline": "Institutional Excellence",
-        "logo_text": "FinVest Experts"
+  "contact": {
+    "tagline": "Secure Consult",
+    "title_start": "Establish Your",
+    "title_highlight": "Mandate.",
+    "description": "Initiate a confidential dialogue with our lead partners. We prioritize discretion and institutional gravity in all engagements.",
+    "info": {
+      "email": "Electronic Mail",
+      "email_value": "experts@msgfinvest.com",
+      "phone": "Direct Line",
+      "phone_value": "+41 44 212 45 45",
+      "hq": "Global HQ",
+      "hq_value": "Bahnhofstrasse 102, Zürich, CH",
+      "ceo": "Contact CEO",
+      "ceo_value": "t.me/Gorby200"
     },
-    "hero": {
-        "title_start": "Institutional",
-        "title_highlight": "Authority",
-        "title_end": "Digital Excellence",
-        "description": "Elevating global financial strategies through elite consulting, data-driven insights, and over two decades of institutional excellence.",
-        "cta_primary": "Execute Vision",
-        "cta_secondary": "Our Mandate",
-        "scroll": "Scroll",
-        "image": "/images/hero.webp",
-        "texture": "/images/texture.webp"
-    },
-    "clients": {
-        "tagline": "Trusted by Institutional Leaders",
-        "image": "/images/clients.webp"
-    },
-    "partners": {
-        "title": "Companies our employees have worked with",
-        "items": [
-            {
-                "name": "TAQA",
-                "logo": "/images/partners/taqa-new2402.logowik.com.webp",
-                "url": "https://www.taqa.com"
-            },
-            {
-                "name": "Suez",
-                "logo": "/images/partners/suez-logo-1.svg",
-                "url": "https://www.suez.com"
-            },
-            {
-                "name": "DataArt",
-                "logo": "/images/partners/DataArt-Logo-Pngsource-NYH72X7A.png",
-                "url": "https://dataart.com"
-            },
-            {
-                "name": "Durisol",
-                "logo": "/images/partners/Durisol.png",
-                "url": "https://durisol.com"
-            },
-            {
-                "name": "London Stock Exchange",
-                "logo": "/images/partners/London_Stock_Exchange_Logo.svg.png",
-                "url": "https://www.lseg.com"
-            },
-            {
-                "name": "Baltinvestbank",
-                "logo": "/images/partners/baltinvestbank.png",
-                "url": "https://baltinvestbank.com"
-            },
-            {
-                "name": "EBRD",
-                "logo": "/images/partners/ebrd.png",
-                "url": "https://www.ebrd.com"
-            },
-            {
-                "name": "Grow Food",
-                "logo": "/images/partners/growfood.png",
-                "url": "https://growfood.pro"
-            },
-            {
-                "name": "IBS",
-                "logo": "/images/partners/ibs.png",
-                "url": "https://ibs.ru"
-            },
-            {
-                "name": "Leipurin",
-                "logo": "/images/partners/leipurin.png",
-                "url": "https://leipurin.com"
-            },
-            {
-                "name": "Nasdaq",
-                "logo": "/images/partners/nasdaq1.svg",
-                "url": "https://www.nasdaq.com"
-            },
-            {
-                "name": "National Bank of Kuwait",
-                "logo": "/images/partners/nbk-logo.svg",
-                "url": "https://www.nbk.com"
-            },
-            {
-                "name": "PBL Holding",
-                "logo": "/images/partners/pbl_holding.png",
-                "url": ""
-            },
-            {
-                "name": "Penoplex",
-                "logo": "/images/partners/penoplex.png",
-                "url": "https://www.penoplex.ru"
-            },
-            {
-                "name": "Piedra Los Martires",
-                "logo": "/images/partners/piedra_los_martires.png",
-                "url": "https://www.piedralosmartires.com"
-            },
-            {
-                "name": "Positive Technologies",
-                "logo": "/images/partners/positive_technologies.webp",
-                "url": "https://www.ptsecurity.com"
-            },
-            {
-                "name": "Ramsay Diagnostics",
-                "logo": "/images/partners/ramsay_diagnostics.png",
-                "url": "https://www.ramsayhealth.com"
-            },
-            {
-                "name": "Reksoft",
-                "logo": "/images/partners/reksoft.png",
-                "url": "https://www.reksoft.ru"
-            }
-        ]
-    },
-    "stats": {
-        "tenure": {
-            "value": "22",
-            "label": "Years of Tenure",
-            "sub": "Since 2003"
-        },
-        "volume": {
-            "value": "$5B+",
-            "label": "Transaction Volume",
-            "sub": "Global Mandates"
-        },
-        "projects": {
-            "value": "200+",
-            "label": "Projects Executed",
-            "sub": " Across EMEA"
-        },
-        "experts": {
-            "value": "25+",
-            "label": "Senior Experts",
-            "sub": "Elite Advisory"
-        }
-    },
-    "services": {
-        "tagline": "Strategic Portfolio",
-        "title_start": "Institutional Solutions for",
-        "title_highlight": "Unprecedented Challenges.",
-        "description": "Our methodology combines deep financial expertise with rigorous analytical frameworks to deliver consistent alpha.",
-        "items": {
-            "arch": {
-                "title": "Financial Architecture",
-                "desc": "High-precision modeling and strategic business planning for multi-billion dollar ventures.",
-                "features": [
-                    "Precision Modeling",
-                    "Stress Testing",
-                    "Capital Optimization"
-                ]
-            },
-            "strat": {
-                "title": "Strategic Mandates",
-                "desc": "Corporate strategy development and organizational forensics for market leadership.",
-                "features": [
-                    "Market Entry",
-                    "Diagnostic Audit",
-                    "Growth Playbooks"
-                ]
-            },
-            "forensics": {
-                "title": "Investment Forensics",
-                "desc": "Deep-dive analysis and independent feasibility studies for institutional investors.",
-                "features": [
-                    "Feasibility Analysis",
-                    "Independent Review",
-                    "Risk Mitigation"
-                ]
-            },
-            "assurance": {
-                "title": "Project Assurance",
-                "desc": "Independent audit and performance tracking for large-scale investment portfolios.",
-                "features": [
-                    "Project Audit",
-                    "Due Diligence",
-                    "Performance Benchmarking"
-                ]
-            },
-            "debt": {
-                "title": "Debt Engineering",
-                "desc": "Complex debt modeling, restructuring, and capital structure optimization.",
-                "features": [
-                    "Restructuring",
-                    "Debt Capacity",
-                    "Structured Finance"
-                ]
-            },
-            "advisory": {
-                "title": "Transaction Advisory",
-                "desc": "Full-spectrum M&A support and institutional-grade company valuation.",
-                "features": [
-                    "M&A Strategy",
-                    "Asset Valuation",
-                    "Deal Structuring"
-                ]
-            }
-        }
-    },
-    "portfolio": {
-        "tagline": "Institutional Track Record",
-        "title_start": "Selected",
-        "title_highlight": "Mandates",
-        "categories": [
-            "All",
-            "Finance",
-            "Strategy",
-            "Institutional"
-        ],
-        "items": {
-            "p1": {
-                "title": "Oil & Gas Debt Restructuring",
-                "desc": "Strategic debt modeling and restructuring for a top-tier energy conglomerate.",
-                "category": "Finance",
-                "tenure": "18 Months",
-                "impact": "+15% OCF",
-                "image": "/images/portfolio1.webp",
-                "value": "$2.1B"
-            },
-            "p2": {
-                "title": "Retail Chain Expansion Strategy",
-                "desc": "Comprehensive market entry and investment analysis for a regional retail leader.",
-                "category": "Strategy",
-                "tenure": "12 Months",
-                "impact": "24 Nodes",
-                "image": "/images/portfolio2.webp",
-                "value": "$500M"
-            },
-            "p3": {
-                "title": "Institutional Portfolio Audit",
-                "desc": "Biannual independent audit and performance assessment of complex investment vehicles.",
-                "category": "Institutional",
-                "tenure": "Ongoing",
-                "impact": "Risk Optimized",
-                "image": "/images/hero.webp",
-                "value": "$1.5B"
-            },
-            "p4": {
-                "title": "FinTech Growth Mandate",
-                "desc": "Business planning and valuation for a series-C technology farm acquisition.",
-                "category": "Finance",
-                "tenure": "6 Months",
-                "impact": "Successful Exit",
-                "image": "/images/texture.webp",
-                "value": "$250M"
-            }
-        },
-        "labels": {
-            "tenure": "Tenure",
-            "impact": "Impact"
-        }
-    },
-    "contact": {
-        "tagline": "Secure Consult",
-        "title_start": "Establish Your",
-        "title_highlight": "Mandate.",
-        "description": "Initiate a confidential dialogue with our lead partners. We prioritize discretion and institutional gravity in all engagements.",
-        "info": {
-            "email": "Electronic Mail",
-            "email_value": "experts@msgfinvest.com",
-            "phone": "Direct Line",
-            "phone_value": "+41 44 212 45 45",
-            "hq": "Global HQ",
-            "hq_value": "Bahnhofstrasse 102, Zürich, CH",
-            "ceo": "Contact CEO",
-            "ceo_value": "t.me/Gorby200"
-        },
-        "form": {
-            "name": "Principal Name",
-            "org": "Organization",
-            "email": "Confidential Email",
-            "type": "Mandate Type",
-            "narrative": "Brief Narrative",
-            "submit": "Submit Mandate Proposal",
-            "security": "All communications are encrypted and subject to Swiss confidentiality standards.",
-            "types": [
-                "Financial Modeling",
-                "Debt Restructuring",
-                "Strategic Acquisition",
-                "Other Institutional Engagement"
-            ],
-            "messages": {
-                "sending": "Encrypting & Transmitting...",
-                "success": "Mandate Proposal Securely Transmitted.",
-                "error": "Transmission Interrupted. Please contact via direct line."
-            }
-        }
-    },
-    "footer": {
-        "rights": "© 2025 MSG FinVest Switzerland. All Rights Reserved.",
-        "privacy": "Privacy Mandate",
-        "compliance": "Compliance",
-        "access": "Institutional Access"
-    },
-    "cta": {
-        "title_start": "Ready to",
-        "title_highlight": "Execute?",
-        "description": "Our experts are standing by to transform your institutional challenges into strategic advantages.",
-        "button": "Secure Consult"
+    "form": {
+      "security": "All communications are encrypted and subject to Swiss confidentiality standards.",
+      "org": "Organization",
+      "name": "Principal Name",
+      "messages": {
+        "sending": "Encrypting & Transmitting...",
+        "success": "Mandate Proposal Securely Transmitted.",
+        "error": "Transmission Interrupted. Please contact via direct line."
+      },
+      "narrative": "Brief Narrative",
+      "submit": "Submit Mandate Proposal",
+      "types": [
+        "Financial Modeling",
+        "Debt Restructuring",
+        "Strategic Acquisition",
+        "Other Institutional Engagement"
+      ],
+      "type": "Mandate Type",
+      "email": "Confidential Email"
     }
+  },
+  "nav": {
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "about": "About",
+    "contact": "Contact",
+    "inquire": "Inquire",
+    "mandate": "Mandate",
+    "tagline": "Institutional Excellence",
+    "logo_text": "FinVest Experts"
+  },
+  "portfolio": {
+    "tagline": "Institutional Track Record",
+    "title_start": "Selected",
+    "title_highlight": "Mandates",
+    "categories": [
+      "All",
+      "Finance",
+      "Strategy",
+      "Institutional"
+    ],
+    "items": {
+      "p1": {
+        "title": "Oil & Gas Debt Restructuring",
+        "desc": "Strategic debt modeling and restructuring for a top-tier energy conglomerate.",
+        "category": "Finance",
+        "tenure": "18 Months",
+        "impact": "+15% OCF",
+        "image": "/images/portfolio1.webp",
+        "value": "$2.1B"
+      },
+      "p2": {
+        "title": "Retail Chain Expansion Strategy",
+        "desc": "Comprehensive market entry and investment analysis for a regional retail leader.",
+        "category": "Strategy",
+        "tenure": "12 Months",
+        "impact": "24 Nodes",
+        "image": "/images/portfolio2.webp",
+        "value": "$500M"
+      },
+      "p3": {
+        "title": "Institutional Portfolio Audit",
+        "desc": "Biannual independent audit and performance assessment of complex investment vehicles.",
+        "category": "Institutional",
+        "tenure": "Ongoing",
+        "impact": "Risk Optimized",
+        "image": "/images/hero.webp",
+        "value": "$1.5B"
+      },
+      "p4": {
+        "title": "FinTech Growth Mandate",
+        "desc": "Business planning and valuation for a series-C technology farm acquisition.",
+        "category": "Finance",
+        "tenure": "6 Months",
+        "impact": "Successful Exit",
+        "image": "/images/texture.webp",
+        "value": "$250M"
+      }
+    },
+    "labels": {
+      "tenure": "Tenure",
+      "impact": "Impact"
+    }
+  },
+  "clients": {
+    "tagline": "Trusted by Institutional Leaders",
+    "image": "/images/clients.webp"
+  },
+  "partners": {
+    "title": "Companies our employees have worked with",
+    "items": [
+      {
+        "name": "TAQA",
+        "logo": "/images/partners/taqa-new2402.logowik.com.webp",
+        "url": "https://www.taqa.com"
+      },
+      {
+        "name": "Suez",
+        "logo": "/images/partners/suez-logo-1.svg",
+        "url": "https://www.suez.com"
+      },
+      {
+        "name": "DataArt",
+        "logo": "/images/partners/DataArt-Logo-Pngsource-NYH72X7A.png",
+        "url": "https://dataart.com"
+      },
+      {
+        "name": "Durisol",
+        "logo": "/images/partners/Durisol.png",
+        "url": "https://durisol.com"
+      },
+      {
+        "name": "London Stock Exchange",
+        "logo": "/images/partners/London_Stock_Exchange_Logo.svg.png",
+        "url": "https://www.lseg.com"
+      },
+      {
+        "name": "Baltinvestbank",
+        "logo": "/images/partners/baltinvestbank.png",
+        "url": "https://baltinvestbank.com"
+      },
+      {
+        "name": "EBRD",
+        "logo": "/images/partners/ebrd.png",
+        "url": "https://www.ebrd.com"
+      },
+      {
+        "name": "Grow Food",
+        "logo": "/images/partners/growfood.png",
+        "url": "https://growfood.pro"
+      },
+      {
+        "name": "IBS",
+        "logo": "/images/partners/ibs.png",
+        "url": "https://ibs.ru"
+      },
+      {
+        "name": "Leipurin",
+        "logo": "/images/partners/leipurin.png",
+        "url": "https://leipurin.com"
+      },
+      {
+        "name": "Nasdaq",
+        "logo": "/images/partners/nasdaq1.svg",
+        "url": "https://www.nasdaq.com"
+      },
+      {
+        "name": "National Bank of Kuwait",
+        "logo": "/images/partners/nbk-logo.svg",
+        "url": "https://www.nbk.com"
+      },
+      {
+        "name": "PBL Holding",
+        "logo": "/images/partners/pbl_holding.png",
+        "url": ""
+      },
+      {
+        "name": "Penoplex",
+        "logo": "/images/partners/penoplex.png",
+        "url": "https://www.penoplex.ru"
+      },
+      {
+        "name": "Piedra Los Martires",
+        "logo": "/images/partners/piedra_los_martires.png",
+        "url": "https://www.piedralosmartires.com"
+      },
+      {
+        "name": "Positive Technologies",
+        "logo": "/images/partners/positive_technologies.webp",
+        "url": "https://www.ptsecurity.com"
+      },
+      {
+        "name": "Ramsay Diagnostics",
+        "logo": "/images/partners/ramsay_diagnostics.png",
+        "url": "https://www.ramsayhealth.com"
+      },
+      {
+        "name": "Reksoft",
+        "logo": "/images/partners/reksoft.png",
+        "url": "https://www.reksoft.ru"
+      }
+    ]
+  },
+  "cta": {
+    "title_start": "Ready to",
+    "title_highlight": "Execute?",
+    "description": "Our experts are standing by to transform your institutional challenges into strategic advantages.",
+    "button": "Secure Consult"
+  },
+  "hero": {
+    "cta_secondary": "Our Mandate",
+    "scroll": "Scroll",
+    "title_highlight": "Authority",
+    "cta_primary": "Execute Vision",
+    "title_end": "Digital Excellence",
+    "texture": "/images/texture.webp",
+    "image": "/images/hero.webp",
+    "title_start": "Institutional",
+    "description": "Elevating global financial strategies through elite consulting, data-driven insights, and over two decades of institutional excellence."
+  },
+  "footer": {
+    "rights": "© 2025 MSG Finvest Experts. All Rights Reserved.",
+    "privacy": "Privacy Mandate",
+    "compliance": "Compliance",
+    "access": "Institutional Access"
+  },
+  "services": {
+    "tagline": "Strategic Portfolio",
+    "title_start": "Institutional Solutions for",
+    "title_highlight": "Unprecedented Challenges.",
+    "description": "Our methodology combines deep financial expertise with rigorous analytical frameworks to deliver consistent alpha.",
+    "items": {
+      "arch": {
+        "title": "Financial Architecture",
+        "desc": "High-precision modeling and strategic business planning for multi-billion dollar ventures.",
+        "features": [
+          "Precision Modeling",
+          "Stress Testing",
+          "Capital Optimization"
+        ]
+      },
+      "strat": {
+        "title": "Strategic Mandates",
+        "desc": "Corporate strategy development and organizational forensics for market leadership.",
+        "features": [
+          "Market Entry",
+          "Diagnostic Audit",
+          "Growth Playbooks"
+        ]
+      },
+      "forensics": {
+        "title": "Investment Forensics",
+        "desc": "Deep-dive analysis and independent feasibility studies for institutional investors.",
+        "features": [
+          "Feasibility Analysis",
+          "Independent Review",
+          "Risk Mitigation"
+        ]
+      },
+      "assurance": {
+        "title": "Project Assurance",
+        "desc": "Independent audit and performance tracking for large-scale investment portfolios.",
+        "features": [
+          "Project Audit",
+          "Due Diligence",
+          "Performance Benchmarking"
+        ]
+      },
+      "debt": {
+        "title": "Debt Engineering",
+        "desc": "Complex debt modeling, restructuring, and capital structure optimization.",
+        "features": [
+          "Restructuring",
+          "Debt Capacity",
+          "Structured Finance"
+        ]
+      },
+      "advisory": {
+        "title": "Transaction Advisory",
+        "desc": "Full-spectrum M&A support and institutional-grade company valuation.",
+        "features": [
+          "M&A Strategy",
+          "Asset Valuation",
+          "Deal Structuring"
+        ]
+      }
+    }
+  },
+  "stats": {
+    "tenure": {
+      "value": "22",
+      "label": "Years of Tenure",
+      "sub": "Since 2003"
+    },
+    "volume": {
+      "value": "$5B+",
+      "label": "Transaction Volume",
+      "sub": "Global Mandates"
+    },
+    "projects": {
+      "value": "200+",
+      "label": "Projects Executed",
+      "sub": " Across EMEA"
+    },
+    "experts": {
+      "value": "25+",
+      "label": "Senior Experts",
+      "sub": "Elite Advisory"
+    }
+  }
 }
